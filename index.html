@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio | Rosario Hernández</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <div>
+        <h1 class="title">Rosario Hernández</h1>
+        <p class="subtitle">Ing. en Tecnologías de la Información e Innovación Digital</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link is-active">Inicio</a>
+        <a href="proyectos.html" class="nav__link">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card hero__card">
+        <h2>Sobre mí</h2>
+        <p>
+          Soy estudiante de Ingeniería en Tecnologías de la Información e Innovación Digital.
+          Me enfoco en desarrollo web y bases de datos, creando soluciones que optimizan procesos
+          mediante sistemas de información y aplicaciones web.
+        </p>
+
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">SQL</span>
+          <span class="chip">PHP (académico)</span>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="proyectos.html">Ver mis 3 proyectos</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Objetivo</h3>
+        <p>
+          Presentar mis proyectos con enfoque en análisis, diseño e implementación de sistemas,
+          destacando funcionalidades, tecnologías y el valor que aportan.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© <span id="year"></span> Rosario Hernández • Portafolio académico</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proyectos | Rosario Hernández</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <div>
+        <h1 class="title">Proyectos</h1>
+        <p class="subtitle">3 proyectos académicos</p>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Inicio</a>
+        <a href="proyectos.html" class="nav__link is-active">Proyectos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+      <!-- PROYECTO 1 -->
+      <article class="card project">
+        <img class="project__img" src="img/p1.png" alt="Proyecto 1" onerror="this.style.display='none'">
+        <h2>Proyecto 1: Sistema de Farmacia</h2>
+        <p>
+          Sistema orientado a la gestión de medicamentos y proveedores. Incluye interfaz de acceso y
+          panel de administración (demo visual).
+        </p>
+        <div class="chips">
+          <span class="chip">UI Web</span>
+          <span class="chip">BD (diseño)</span>
+          <span class="chip">CRUD (concepto)</span>
+        </div>
+      </article>
+
+      <!-- PROYECTO 2 -->
+      <article class="card project">
+        <img class="project__img" src="img/p2.png" alt="Proyecto 2" onerror="this.style.display='none'">
+        <h2>Proyecto 2: (Escribe aquí el nombre)</h2>
+        <p>
+          Descripción breve del proyecto: qué problema resuelve y qué hace el sistema.
+        </p>
+        <div class="chips">
+          <span class="chip">Web</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Análisis</span>
+        </div>
+      </article>
+
+      <!-- PROYECTO 3 -->
+      <article class="card project">
+        <img class="project__img" src="img/p3.png" alt="Proyecto 3" onerror="this.style.display='none'">
+        <h2>Proyecto 3: (Escribe aquí el nombre)</h2>
+        <p>
+          Descripción breve del proyecto: funcionalidades principales y enfoque.
+        </p>
+        <div class="chips">
+          <span class="chip">Diseño</span>
+          <span class="chip">Documentación</span>
+          <span class="chip">UI</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="card note">
+      <h3>Nota</h3>
+      <p>
+        Esta es una versión estática para visualización (GitHub Pages no ejecuta PHP ni base de datos).
+        El objetivo es presentar la interfaz y el alcance del sistema.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <small>© <span id="year"></span> Rosario Hernández • Proyectos</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
