@@ -129,15 +129,19 @@ code, .mono, .nav-code{
 }
 
 /* HERO full screen */
+
 .hero{
   min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding-top: 90px;
-  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
   position: relative;
   overflow: hidden;
 }
+
+
 
 /* Fondo (puede ser imagen o gradiente) */
 .hero::before{
@@ -165,12 +169,15 @@ code, .mono, .nav-code{
 */
 
 .hero-title{
-  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  .hero-title{
+  font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 900;
   letter-spacing: .12em;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 12px;
+}
+
 }
 .hero-sub{
   font-family: "Space Mono", monospace;
