@@ -27,8 +27,75 @@
   --accent: #66e3ff;
   --accent2: #b27cff;
   --glow: rgba(102,227,255,.25);
-  --nav-h: 78px;
+  --nav-h: 78px; /* altura aproximada de tu navbar */
 }
+
+/* HERO (una sola definición, sin duplicados) */
+.hero{
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;     /* centra vertical */
+  justify-content: center; /* centra horizontal */
+}
+
+/* Contenido centrado perfecto */
+.hero-inner{
+  width: 100%;
+  max-width: 1100px;
+  margin-inline: auto;
+  text-align: center;
+
+  /* IMPORTANTE: quita el translateY que te descentraba */
+  transform: none;
+}
+
+/* Título (ajústalo aquí) */
+.hero-title{
+  font-size: clamp(3.2rem, 8vw, 6.8rem); /* más como tamalsen pero controlado */
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  line-height: .95;       /* para que se vea compacto y “pro” */
+  margin: 0 0 14px 0;
+}
+
+/* Subtítulo */
+.hero-sub{
+  font-family: "Space Mono", monospace;
+  color: rgba(232,238,247,.85);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: clamp(.85rem, 1.2vw, 1.05rem);
+  margin: 0;
+}
+
+.hero-badge{
+  margin-top: 34px;
+  color: rgba(232,238,247,.35);
+  font-family: "Space Mono", monospace;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .85rem;
+}
+
+/* Fondo */
+.hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    radial-gradient(900px 600px at 55% 30%, rgba(178,124,255,.22), transparent 60%),
+    radial-gradient(900px 650px at 30% 55%, rgba(102,227,255,.18), transparent 62%),
+    radial-gradient(700px 500px at 70% 70%, rgba(102,227,255,.10), transparent 65%),
+    linear-gradient(180deg, rgba(7,11,18,.86), rgba(7,11,18,.95));
+  z-index: -2;
+}
+
+
+
 
 
 
@@ -131,69 +198,6 @@ code, .mono, .nav-code{
   opacity: 1;
 }
 
-/* HERO (una sola definición, sin duplicados) */
-.hero{
-  min-height: 100vh;
-  padding-top: var(--nav-h);
-  position: relative;
-  overflow: hidden;
-
-  display: flex;
-  align-items: center;     /* centra vertical */
-  justify-content: center; /* centra horizontal */
-}
-
-/* Contenido centrado perfecto */
-.hero-inner{
-  width: 100%;
-  max-width: 1100px;
-  margin-inline: auto;
-  text-align: center;
-
-  /* IMPORTANTE: quita el translateY que te descentraba */
-  transform: none;
-}
-
-/* Título (ajústalo aquí) */
-.hero-title{
-  font-size: clamp(3.2rem, 8vw, 6.8rem); /* más como tamalsen pero controlado */
-  font-weight: 900;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  line-height: .95;       /* para que se vea compacto y “pro” */
-  margin: 0 0 14px 0;
-}
-
-/* Subtítulo */
-.hero-sub{
-  font-family: "Space Mono", monospace;
-  color: rgba(232,238,247,.85);
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  font-size: clamp(.85rem, 1.2vw, 1.05rem);
-  margin: 0;
-}
-
-.hero-badge{
-  margin-top: 34px;
-  color: rgba(232,238,247,.35);
-  font-family: "Space Mono", monospace;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  font-size: .85rem;
-}
-
-/* Fondo */
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(900px 600px at 55% 30%, rgba(178,124,255,.22), transparent 60%),
-    radial-gradient(900px 650px at 30% 55%, rgba(102,227,255,.18), transparent 62%),
-    radial-gradient(700px 500px at 70% 70%, rgba(102,227,255,.10), transparent 65%),
-    linear-gradient(180deg, rgba(7,11,18,.86), rgba(7,11,18,.95));
-  z-index: -2;
-}
 
 .scroll-indicator{
   position:absolute;
