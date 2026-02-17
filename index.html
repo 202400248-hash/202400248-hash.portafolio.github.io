@@ -32,15 +32,18 @@
 
 /* HERO (una sola definición, sin duplicados) */
 .hero{
-  min-height: 100vh;
+  /* en lugar de 100vh, restamos el navbar */
+  min-height: calc(100vh - var(--nav-h));
   padding-top: var(--nav-h);
+
   position: relative;
   overflow: hidden;
 
   display: flex;
-  align-items: center;     /* centra vertical */
-  justify-content: center; /* centra horizontal */
+  align-items: center;
+  justify-content: center;
 }
+
 
 /* Contenido centrado perfecto */
 .hero-inner{
