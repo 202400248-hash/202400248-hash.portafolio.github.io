@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leo  | Estudiante de Ingeniero en Software</title>
+  <title> Rosario Hernandez  | Estudiante de Ingenieria en Software</title>
   <meta name="description" content="Ingeniero en Software | Desarrollo Full-Stack | React, Node.js, Python"/>
 
   <!-- Bootstrap 5 CSS -->
@@ -18,22 +18,20 @@
 
   <style>
 
-    :root{
+ :root{
   --bg: #070b12;
   --card-bg: rgba(255,255,255,.04);
   --text: #e8eef7;
   --text-muted: rgba(232,238,247,.65);
   --border: rgba(255,255,255,.10);
-
   --accent: #66e3ff;
   --accent2: #b27cff;
   --glow: rgba(102,227,255,.25);
+  --nav-h: 78px;
 }
 
-.hero{
-  padding-top: var(--nav-h);
-  min-height: calc(100vh - var(--nav-h));
-}
+
+
     /* --- Resume / Educación estilo pro --- */
 .resume-grid {
   display: grid;
@@ -140,7 +138,8 @@ code, .mono, .nav-code{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding-top: var(--nav-h);  /* espacio real por navbar fixed */
+  padding-bottom: 40px;
   position: relative;
   overflow: hidden;
 }
@@ -150,8 +149,9 @@ code, .mono, .nav-code{
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
-  transform: translateY(-60px); /* súbelo más */
+  transform: none; /* quita el translateY */
 }
+
 
 
 
@@ -181,13 +181,13 @@ code, .mono, .nav-code{
   z-index:-3;
 }
 */
-
 .hero-title{
-  font-size: clamp(3.5rem, 9vw, 8rem);
-  font-weight: 750;
-  letter-spacing: .12em;
+  font-size: clamp(2.6rem, 6.5vw, 5.6rem); /* MÁS CHICO */
+  font-weight: 900;
+  letter-spacing: .10em;
   text-transform: uppercase;
   text-align: center;
+  line-height: 1.02;
   margin-bottom: 12px;
 }
 
@@ -370,7 +370,11 @@ code, .mono, .nav-code{
   <div class="container hero-inner">
     <div>
 
-      <h1 class="hero-title">Rosario Hernández</h1>
+     <h1 class="hero-title">
+       <span class="d-block">Rosario</span>
+       <span class="d-block">Hernández</span>
+     </h1>
+
       <p class="hero-sub">Software Engineer, Front End & App Developer.</p>
 
       <div class="hero-badge mt-4">as featured in</div>
