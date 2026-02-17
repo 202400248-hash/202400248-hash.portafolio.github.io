@@ -135,11 +135,11 @@ code, .mono, .nav-code{
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 0;
   position: relative;
   overflow: hidden;
 }
+
 
 
 
@@ -198,6 +198,14 @@ code, .mono, .nav-code{
   text-align:center;
   font-size: .85rem;
 }
+.hero-inner{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(-20px); /* súbelo un poquito */
+}
+
 
 .scroll-indicator{
   position:absolute;
@@ -351,8 +359,9 @@ code, .mono, .nav-code{
 </nav>
 
 <section id="home" class="hero">
-  <div class="container">
-    <div class="text-center">
+  <div class="container hero-inner">
+    <div>
+
       <h1 class="hero-title">Rosario Hernández</h1>
       <p class="hero-sub">Software Engineer, Front End & App Developer.</p>
 
