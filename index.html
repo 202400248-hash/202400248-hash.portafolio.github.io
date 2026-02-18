@@ -426,79 +426,44 @@ code, .mono, .nav-code{
   transform: translateY(-3px);
 }
 
-/* ====== PROYECTOS (estilo tipo ejemplo) ====== */
-.projects-grid .card{
-  border-radius: 22px;
+/* Marco del carrusel (reduce tamaño y lo hace uniforme) */
+.project-carousel-wrap{
+  border-radius: 16px;
   overflow: hidden;
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.project-thumb{
+/* Tamaño fijo del carrusel (ajusta aquí si lo quieres más chico) */
+.project-carousel-wrap .carousel-inner{
+  height: 320px; /* <- cambia a 260px si lo quieres aún más pequeño */
+}
+
+/* Imágenes: todas iguales, sin deformar */
+.project-carousel-img{
+  height: 320px;      /* igual que .carousel-inner */
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  filter: saturate(1.05) contrast(1.02);
+  object-fit: cover;  /* llena el marco, recorta lo necesario */
+  object-position: center;
 }
 
-.project-body{
-  padding: 18px 18px 16px;
+/* Flechas más visibles en fondo oscuro */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  filter: invert(1);
+  opacity: 0.9;
 }
 
-.project-title{
-  font-weight: 900;
-  margin: 0 0 6px;
-  font-size: 1.35rem;
-}
-
-.project-desc{
-  margin: 0 0 14px;
-  color: rgba(232,238,247,.65);
-  font-family: "Space Mono", monospace;
-  font-size: .95rem;
-  line-height: 1.55;
-}
-
-.project-tags{
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin: 0 0 14px;
-}
-.project-tag{
-  padding: .28rem .6rem;
+/* Indicadores más finos y pro */
+.carousel-indicators [data-bs-target]{
+  height: 6px;
+  width: 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(232,238,247,.80);
-  font-size: .82rem;
-  font-weight: 700;
+  background-color: rgba(140, 220, 255, 0.7);
 }
-
-.project-link{
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  text-decoration: none;
-  font-weight: 800;
-  color: var(--accent);
+.carousel-indicators .active{
+  background-color: rgba(140, 220, 255, 1);
 }
-.project-link:hover{
-  color: white;
-}
-
-.project-card2{
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.project-card2:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 26px 70px rgba(0,0,0,.55);
-  border-color: rgba(102,227,255,.35);
-}
-
-
 
 
 
