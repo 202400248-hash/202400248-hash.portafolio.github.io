@@ -499,21 +499,43 @@ code, .mono, .nav-code{
 }
  
 /* home y presentacion sobre mi */
+/* Evita que HERO se coma toda la pantalla */
+.hero{
+  min-height: auto !important;
+  height: auto !important;
+  padding: 80px 0 40px;
+}
+
+/* Si tenías height/min-height en hero-inner, lo anulamos */
+.hero-inner{
+  min-height: auto !important;
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Portada centrada y con separación controlada */
 .hero-top{
-  min-height: 70vh;            /* portada grande */
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
+/* Sección “Sobre mí” dentro del mismo home */
 .hero-about{
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-  border-top: 1px solid rgba(255,255,255,.08); /* separador sutil */
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
 }
 
+/* Opcional: línea separadora suave entre portada y sobre mí */
+.hero-top::after{
+  content: "";
+  display: block;
+  width: min(900px, 85%);
+  height: 1px;
+  margin: 30px auto 0;
+  background: rgba(255,255,255,.12);
+}
 
 
 
@@ -653,6 +675,9 @@ code, .mono, .nav-code{
     </div>
 
   </div>
+    </div>
+</section>
+
 
   <!-- Flecha: ahora baja a RESUME -->
   <a href="#resume" class="scroll-indicator" aria-label="Scroll">
