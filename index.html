@@ -312,6 +312,86 @@ code, .mono, .nav-code{
   border-color: rgba(178,124,255,.35);
 }
 
+/* ===== EXPERIENCE ===== */
+
+.experience{
+  background: linear-gradient(
+    180deg,
+    rgba(7,11,18,.95),
+    rgba(7,11,18,1)
+  );
+}
+
+.exp-title{
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: .05em;
+}
+
+/* Grid horizontal */
+.exp-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid rgba(255,255,255,.15);
+}
+
+@media(max-width: 992px){
+  .exp-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card */
+.exp-card{
+  padding: 48px 38px;
+  border-right: 1px solid rgba(255,255,255,.15);
+  transition: .3s;
+}
+
+.exp-card:last-child{
+  border-right: none;
+}
+
+/* Hover */
+.exp-card:hover{
+  background: rgba(255,255,255,.02);
+}
+
+/* Icon */
+.exp-icon{
+  font-size: 2.2rem;
+  margin-bottom: 18px;
+  color: var(--accent);
+}
+
+/* Title */
+.exp-card h3{
+  font-weight: 800;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+/* Text */
+.exp-card p{
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-family: "Space Mono", monospace;
+}
+
+/* Accent words */
+.accent{
+  color: #4c6fff;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+.accent2{
+  color: #ff7a18;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+
 
   </style>
 
@@ -529,36 +609,53 @@ Actualmente en quinto cuatrimestre, con interés en el desarrollo de soluciones 
   </div>
 </section>
 
-<section id="experiencia" class="py-5 bg-black bg-opacity-25">
+<section id="experiencia" class="experience py-5">
   <div class="container">
-    <h2 class="section-title text-center mb-5">Experience</h2>
 
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-            <div class="mini-title mb-2">Enfoque actual</div>
-            <h5 class="mb-2">UX/UI + Desarrollo Web</h5>
-            <p class="text-muted mb-0">
-              Diseño centrado en el usuario, interfaces limpias, y desarrollo web conectado a bases de datos.
-            </p>
-          </div>
-        </div>
+    <h2 class="exp-title text-center mb-5">Mi experiencia</h2>
+
+    <div class="exp-grid">
+
+      <!-- Card 1 -->
+      <div class="exp-card">
+        <i class="bi bi-display exp-icon"></i>
+
+        <h3>Desarrollo de software</h3>
+
+        <p>
+          Experiencia tanto en programación funcional como orientada a objetos:
+          Dart, Python, Java, JavaScript y TypeScript.
+        </p>
       </div>
 
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-            <div class="mini-title mb-2">Stack / Herramientas</div>
-            <div class="chips">
-              <span class="chip"><i class="bi bi-palette"></i> Figma</span>
-              <span class="chip"><i class="bi bi-window"></i> Bootstrap</span>
-              <span class="chip"><i class="bi bi-code-slash"></i> PHP</span>
-              <span class="chip"><i class="bi bi-database"></i> MySQL</span>
-              <span class="chip"><i class="bi bi-database"></i> SQL Server</span>
-            </div>
-          </div>
-        </div>
+      <!-- Card 2 -->
+      <div class="exp-card">
+        <i class="bi bi-code-slash exp-icon"></i>
+
+        <h3>
+          Desarrollo <span class="accent">frontend</span><br>
+          React, NextJS
+        </h3>
+
+        <p>
+          Apasionado por la UI/UX. Desarrollo de interfaces modernas
+          utilizando HTML, CSS, JavaScript, React y NextJS.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="exp-card">
+        <i class="bi bi-phone exp-icon"></i>
+
+        <h3>
+          Desarrollador <span class="accent2">Flutter</span><br>
+          Android e iOS
+        </h3>
+
+        <p>
+          Desarrollo de aplicaciones móviles híbridas y soluciones
+          multiplataforma utilizando Flutter.
+        </p>
       </div>
 
     </div>
