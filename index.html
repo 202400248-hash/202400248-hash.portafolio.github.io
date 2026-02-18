@@ -426,42 +426,33 @@ code, .mono, .nav-code{
   transform: translateY(-3px);
 }
 
+/* ===== Carrusel uniforme y profesional (sin recorte) ===== */
+#carouselProyecto1 .carousel-inner{
+  border-radius: 12px;       /* se ve más pro */
+  overflow: hidden;
+  background: rgba(0,0,0,.35); /* fondo para cuando sobre espacio */
+}
 
- /* Contenedor del carrusel (altura pareja y no enorme) */
-  .carousel-pro {
-    border-radius: 14px;
-    overflow: hidden;
-    background: rgba(0,0,0,.35); /* fondo para que si sobra espacio se vea elegante */
-  }
+/* Altura uniforme del carrusel */
+#carouselProyecto1 .carousel-item{
+  height: min(52vh, 420px);  /* AJUSTA: 380/420/480 según te guste */
+  background: rgba(0,0,0,.35);
+}
 
-  /* Alto uniforme (ajusta si quieres: 420px / 480px etc.) */
-  .carousel-pro .carousel-item{
-    height: min(52vh, 420px);
-    background: rgba(0,0,0,.35);
-  }
+/* Imagen completa, sin recorte */
+#carouselProyecto1 .carousel-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* CLAVE: muestra completa */
+  object-position: center;
+  display: block;
+}
 
-  /* La imagen SIEMPRE completa (sin recorte) */
-  .carousel-pro .carousel-item img{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;  /* <-- clave */
-    object-position: center;
-    display: block;
-  }
-
-  /* Flechas más limpias */
-  .carousel-pro .carousel-control-prev,
-  .carousel-pro .carousel-control-next{
-    width: 10%;
-  }
-
-  /* Indicadores (puntitos) más visibles */
-  .carousel-pro .carousel-indicators [data-bs-target]{
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-  }
-
+/* Flechas menos invasivas */
+#carouselProyecto1 .carousel-control-prev,
+#carouselProyecto1 .carousel-control-next{
+  width: 10%;
+}
 
 
 
@@ -853,41 +844,43 @@ code, .mono, .nav-code{
 
         <!-- ========================= -->
         <!--         CARRUSEL          -->
-        <!-- ========================= -->
-        <div id="carouselProyecto1" class="carousel slide carousel-pro mb-4" data-bs-ride="carousel">
+       <!-- Modal Proyecto 1 -->
+<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-0">
+        <h5 class="modal-title" id="modalProyecto1Label">Robot Shop</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
-          <!-- Indicadores -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="0" class="active" aria-current="true"></button>
-            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="4"></button>
-          </div>
+      <div class="modal-body">
 
+        <!-- Carrusel de imágenes -->
+        <div id="carouselProyecto1" class="carousel slide mb-4" data-bs-ride="carousel">
           <div class="carousel-inner">
+
             <div class="carousel-item active">
-              <img src="assets/img/Piso1.png" alt="Inicio Pisos del Caribe">
+              <img src="assets/img/Piso1.png" class="d-block w-100" alt="Pantalla principal">
             </div>
 
             <div class="carousel-item">
-              <img src="assets/img/Piso2.png" alt="Catálogo de productos">
+              <img src="assets/img/Piso2.png" class="d-block w-100" alt="Pantalla 2">
             </div>
 
             <div class="carousel-item">
-              <img src="assets/img/Piso3.png" alt="Detalle de producto">
+              <img src="assets/img/Piso3.png" class="d-block w-100" alt="Pantalla 3">
             </div>
 
             <div class="carousel-item">
-              <img src="assets/img/Piso4.png" alt="Calculadora de m2">
+              <img src="assets/img/Piso4.png" class="d-block w-100" alt="Pantalla 4">
             </div>
 
             <div class="carousel-item">
-              <img src="assets/img/Pisos4.png" alt="Cotización / resumen">
+              <img src="assets/img/Piso5.jpeg" class="d-block w-100" alt="Pantalla 5">
             </div>
+
           </div>
 
-          <!-- Controles -->
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
@@ -898,6 +891,12 @@ code, .mono, .nav-code{
             <span class="visually-hidden">Siguiente</span>
           </button>
         </div>
+
+        <!-- aquí sigue tu contenido (descripción, etc.) -->
+      </div>
+    </div>
+  </div>
+</div>
 
         <!-- ========================= -->
         <!--        DESCRIPCIÓN        -->
