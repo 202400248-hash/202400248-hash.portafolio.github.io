@@ -528,18 +528,23 @@ code, .mono, .nav-code{
         <h2 class="fw-bold">Rosario Hernández</h2>
         <h5 class="text-muted">Estudiante de Ingeniería en Software</h5>
 
-        <!-- ICONOS -->
-        <div class="d-flex justify-content-center gap-3 mt-3">
+      <div class="d-flex justify-content-center gap-3 mt-3">
 
-          <!-- TELEFONO (llama directo en celular) -->
-          <a href="#" class="contact-icon"
-   role="button"
-   data-bs-toggle="popover"
-   data-bs-placement="bottom"
-   data-bs-content="+52 998 480 6010"
-   aria-label="Teléfono">
-  <i class="bi bi-telephone-fill"></i>
-</a>
+  <!-- TELEFONO: muestra popover, NO abre tel -->
+  <button type="button"
+          class="contact-icon btn btn-outline-light"
+          data-bs-toggle="popover"
+          data-bs-placement="bottom"
+          data-bs-html="true"
+          data-bs-title="Teléfono"
+          data-bs-content='
+            <div class="d-flex align-items-center gap-2">
+              <span id="phoneText">+52 998 480 6010</span>
+              <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
+            </div>
+          '>
+    <i class="bi bi-telephone-fill"></i>
+  </button>
 
           <!-- GITHUB -->
           <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub" title="GitHub">
@@ -1085,10 +1090,17 @@ code, .mono, .nav-code{
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+  // Inicializar popovers
   document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
     new bootstrap.Popover(el, { trigger: 'click' });
   });
+
+  // Copiar teléfono
+  function copyPhone() {
+    navigator.clipboard.writeText("+529984806010");
+  }
 </script>
+
 
 </body>
 </html>
