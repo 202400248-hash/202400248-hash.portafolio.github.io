@@ -426,45 +426,41 @@ code, .mono, .nav-code{
   transform: translateY(-3px);
 }
 
-/* Marco del carrusel (reduce tamaño y lo hace uniforme) */
-.project-carousel-wrap{
-  border-radius: 16px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-}
 
-/* Tamaño fijo del carrusel (ajusta aquí si lo quieres más chico) */
-.project-carousel-wrap .carousel-inner{
-  height: 320px; /* <- cambia a 260px si lo quieres aún más pequeño */
-}
+ /* Contenedor del carrusel (altura pareja y no enorme) */
+  .carousel-pro {
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(0,0,0,.35); /* fondo para que si sobra espacio se vea elegante */
+  }
 
-/* Imágenes: todas iguales, sin deformar */
-.project-carousel-img{
-  height: 320px;      /* igual que .carousel-inner */
-  width: 100%;
-  object-fit: cover;  /* llena el marco, recorta lo necesario */
-  object-position: center;
-}
+  /* Alto uniforme (ajusta si quieres: 420px / 480px etc.) */
+  .carousel-pro .carousel-item{
+    height: min(52vh, 420px);
+    background: rgba(0,0,0,.35);
+  }
 
-/* Flechas más visibles en fondo oscuro */
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
-  filter: invert(1);
-  opacity: 0.9;
-}
+  /* La imagen SIEMPRE completa (sin recorte) */
+  .carousel-pro .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* <-- clave */
+    object-position: center;
+    display: block;
+  }
 
-/* Indicadores más finos y pro */
-.carousel-indicators [data-bs-target]{
-  height: 6px;
-  width: 18px;
-  border-radius: 999px;
-  background-color: rgba(140, 220, 255, 0.7);
-}
-.carousel-indicators .active{
-  background-color: rgba(140, 220, 255, 1);
-}
+  /* Flechas más limpias */
+  .carousel-pro .carousel-control-prev,
+  .carousel-pro .carousel-control-next{
+    width: 10%;
+  }
 
+  /* Indicadores (puntitos) más visibles */
+  .carousel-pro .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
 
 
 
@@ -839,92 +835,93 @@ code, .mono, .nav-code{
 
 <!-- ============================================= -->
 <!--                  MODALES                     -->
-<!-- ============================================= -->
-<!--            MODAL PROYECTO 1                   -->
-<!-- ============================================= -->
-<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-hidden="true">
+<
+<!-- ✅ MODAL Proyecto 1 (Pisos del Caribe) - listo para copiar y pegar -->
+<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
   <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-dark text-light border-0 shadow-lg">
+    <div class="modal-content bg-dark text-light">
 
       <!-- HEADER -->
       <div class="modal-header border-0">
-        <h5 class="modal-title fw-bold">
+        <h5 class="modal-title" id="modalProyecto1Label">
           Pisos del Caribe — Catálogo & Cotizador Web
         </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <!-- BODY -->
       <div class="modal-body">
 
-        <!-- CARRUSEL (marco fijo para que todas se vean iguales) -->
-        <div class="project-carousel-wrap mb-4">
-          <div id="carouselPisos"
-               class="carousel slide carousel-fade"
-               data-bs-ride="carousel"
-               data-bs-interval="3500">
+        <!-- ========================= -->
+        <!--         CARRUSEL          -->
+        <!-- ========================= -->
+        <div id="carouselProyecto1" class="carousel slide carousel-pro mb-4" data-bs-ride="carousel">
 
-            <!-- INDICADORES -->
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselPisos" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#carouselPisos" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#carouselPisos" data-bs-slide-to="2"></button>
-              <button type="button" data-bs-target="#carouselPisos" data-bs-slide-to="3"></button>
-            </div>
-
-            <!-- IMÁGENES -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="assets/img/Piso1.png" class="d-block w-100 project-carousel-img" alt="Inicio Pisos del Caribe">
-              </div>
-
-              <div class="carousel-item">
-                <img src="assets/img/Piso2.png" class="d-block w-100 project-carousel-img" alt="Catálogo de productos">
-              </div>
-
-              <div class="carousel-item">
-                <img src="assets/img/Piso3.png" class="d-block w-100 project-carousel-img" alt="Detalle de producto">
-              </div>
-
-              <div class="carousel-item">
-                <img src="assets/img/Piso4.png" class="d-block w-100 project-carousel-img" alt="Calculadora de m2">
-              </div>
-            </div>
-
-            <!-- FLECHAS -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPisos" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Anterior</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselPisos" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Siguiente</span>
-            </button>
-
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselProyecto1" data-bs-slide-to="4"></button>
           </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/Piso1.png" alt="Inicio Pisos del Caribe">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso2.png" alt="Catálogo de productos">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso3.png" alt="Detalle de producto">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso4.png" alt="Calculadora de m2">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Pisos4.png" alt="Cotización / resumen">
+            </div>
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
 
-        <!-- DESCRIPCIÓN -->
+        <!-- ========================= -->
+        <!--        DESCRIPCIÓN        -->
+        <!-- ========================= -->
         <h5>Descripción</h5>
+
         <p>
-          <b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital
-          y cotizador para la venta e instalación de pisos vinílicos tipo SPC, duela y laminados.
+          <b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital y cotizador
+          para la venta e instalación de pisos vinílicos tipo SPC, duela y laminados.
         </p>
+
         <p>
-          El sistema permite visualizar productos, conocer sus características técnicas
-          y calcular costos estimados de instalación según los metros cuadrados del área,
-          facilitando el proceso de cotización para clientes.
+          El sistema permite visualizar productos, conocer sus características técnicas y calcular costos estimados
+          según los metros cuadrados del área, facilitando el proceso de cotización para clientes.
         </p>
 
         <h5>Funcionalidades principales</h5>
         <ul>
-          <li>Catálogo dinámico de productos</li>
+          <li>Catálogo de productos y colecciones</li>
           <li>Detalle técnico por producto</li>
-          <li>Calculadora de metros cuadrados</li>
-          <li>Cálculo automático de cajas</li>
-          <li>Estimación de costo de material y mano de obra</li>
-          <li>Cotización estimada para clientes</li>
+          <li>Calculadora de m² y cajas necesarias</li>
+          <li>Estimación de costo de material</li>
+          <li>Cálculo de mano de obra por m²</li>
+          <li>Cotización estimada</li>
         </ul>
 
         <h5>Tecnologías utilizadas</h5>
@@ -933,15 +930,14 @@ code, .mono, .nav-code{
           <li>Framework UI: Bootstrap</li>
           <li>Backend: PHP</li>
           <li>Base de datos: MySQL</li>
-          <li>Consultas SQL</li>
         </ul>
 
-        <h5>Mi participación</h5>
+        <h5>Mi participación en el proyecto</h5>
         <ul>
-          <li>Diseño y desarrollo completo del sistema web</li>
-          <li>Creación de base de datos y consultas</li>
-          <li>Implementación del catálogo dinámico</li>
-          <li>Programación de calculadora y lógica de cotización</li>
+          <li>Diseño y desarrollo del sistema web</li>
+          <li>Base de datos de productos</li>
+          <li>Catálogo dinámico</li>
+          <li>Lógica de calculadora y cotización</li>
           <li>Diseño UI/UX e integración frontend + backend</li>
         </ul>
 
@@ -949,24 +945,13 @@ code, .mono, .nav-code{
 
       <!-- FOOTER -->
       <div class="modal-footer border-0">
-        <a href="https://github.com/202400248-hash/Proyecto---Escaner-Estudiantil.git"
-           target="_blank"
-           rel="noopener"
-           class="btn btn-outline-light">
-          Ver código en GitHub
-        </a>
-
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Cerrar
-        </button>
+        <a href="#" target="_blank" class="btn btn-outline-light">Ver código en GitHub</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
 
     </div>
   </div>
 </div>
-
-
-
 
 <!-- Modal Proyecto 2 -->
 <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
