@@ -569,13 +569,24 @@ code, .mono, .nav-code{
       <p class="hero-sub">Software Engineer, Front End & App Developer.</p>
 
       <!-- CORREO -->
-<a href="mailto:charitohernandez269@gmail.com"
-   class="contact-icon btn btn-outline-light"
-   title="Enviar correo">
+<!-- CORREO -->
+<button type="button"
+  class="contact-icon btn btn-outline-light"
+  data-bs-toggle="popover"
+  data-bs-placement="bottom"
+  data-bs-html="true"
+  data-bs-title="Correo"
+  data-bs-content='
+    <div class="d-flex align-items-center gap-2">
+      <span id="emailText">charitohernandez269@gmail.com</span>
+      <button class="btn btn-sm btn-primary" onclick="copyEmail()">Copiar</button>
+    </div>
+  '>
 
   <i class="bi bi-envelope-fill"></i>
 
-</a>
+</button>
+
 
       <!-- TELEFONO: muestra popover, NO abre tel -->
   <button type="button"
@@ -1110,7 +1121,18 @@ al personal autorizado.
   function copyPhone() {
     navigator.clipboard.writeText("+529984806010");
   }
+
+  
 </script>
+
+<script>
+function copyEmail() {
+  const text = document.getElementById("emailText").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Correo copiado: " + text);
+}
+</script>
+
 
 
 </body>
