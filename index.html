@@ -873,58 +873,111 @@ code, .mono, .nav-code{
 
 
 <!-- ============================================= -->
-<!--                  MODALES                     -->
-
-
+<!--            MODAL PROYECTO 1                   -->
 <!-- ============================================= -->
-<!--                Modal Proyecto 1               -->
-<!-- ============================================= -->
-<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-hidden="true">
+
   <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
+
+    <div class="modal-content bg-dark text-light border-0 shadow-lg">
 
       <!-- HEADER -->
       <div class="modal-header border-0">
-        <h5 class="modal-title" id="modalProyecto1Label">
+        <h5 class="modal-title fw-bold">
           Pisos del Caribe — Catálogo & Cotizador Web
         </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+
+        <button type="button" 
+                class="btn-close btn-close-white" 
+                data-bs-dismiss="modal">
+        </button>
       </div>
 
+      <!-- BODY -->
       <div class="modal-body">
 
-        <!-- ========================= -->
-        <!--     GALERÍA (SIN CARRUSEL) -->
-        <!-- ========================= -->
-        <div class="project-gallery mb-4">
+        <!-- =============================== -->
+        <!--          CARRUSEL               -->
+        <!-- =============================== -->
+        <div id="carouselPisos" 
+             class="carousel slide carousel-fade mb-4" 
+             data-bs-ride="carousel">
 
-  <a href="assets/img/Piso1.png" target="_blank" class="shot">
-    <img src="assets/img/Piso1.png" alt="Inicio Pisos del Caribe">
-  </a>
+          <!-- INDICADORES -->
+          <div class="carousel-indicators">
 
-  <a href="assets/img/Piso2.png" target="_blank" class="shot">
-    <img src="assets/img/Piso2.png" alt="Catálogo de productos">
-  </a>
+            <button type="button" data-bs-target="#carouselPisos"
+                    data-bs-slide-to="0"
+                    class="active"></button>
 
-  <a href="assets/img/Piso3.png" target="_blank" class="shot">
-    <img src="assets/img/Piso3.png" alt="Detalle de producto">
-  </a>
+            <button type="button" data-bs-target="#carouselPisos"
+                    data-bs-slide-to="1"></button>
 
-  <a href="assets/img/Piso4.png" target="_blank" class="shot">
-    <img src="assets/img/Piso4.png" alt="Calculadora de m2">
-  </a>
-  
-</div>
+            <button type="button" data-bs-target="#carouselPisos"
+                    data-bs-slide-to="2"></button>
 
+            <button type="button" data-bs-target="#carouselPisos"
+                    data-bs-slide-to="3"></button>
 
-        <!-- ========================= -->
-        <!--       DESCRIPCIÓN         -->
-        <!-- ========================= -->
+          </div>
+
+          <!-- IMÁGENES -->
+          <div class="carousel-inner rounded shadow">
+
+            <div class="carousel-item active">
+              <img src="assets/img/Piso1.png"
+                   class="d-block w-100"
+                   alt="Inicio Pisos del Caribe">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso2.png"
+                   class="d-block w-100"
+                   alt="Catálogo de productos">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso3.png"
+                   class="d-block w-100"
+                   alt="Detalle de producto">
+            </div>
+
+            <div class="carousel-item">
+              <img src="assets/img/Piso4.png"
+                   class="d-block w-100"
+                   alt="Calculadora de m2">
+            </div>
+
+          </div>
+
+          <!-- FLECHAS -->
+          <button class="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselPisos"
+                  data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselPisos"
+                  data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+          </button>
+
+        </div>
+
+        <!-- =============================== -->
+        <!--          DESCRIPCIÓN            -->
+        <!-- =============================== -->
         <h5>Descripción</h5>
 
         <p>
-          <b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital y cotizador
-          para la venta e instalación de pisos vinílicos tipo SPC, duela y laminados.
+          <b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital
+          y cotizador para la venta e instalación de pisos vinílicos tipo SPC,
+          duela y laminados.
         </p>
 
         <p>
@@ -933,40 +986,62 @@ code, .mono, .nav-code{
           facilitando el proceso de cotización para clientes.
         </p>
 
-        <p>
-          El proyecto integra funcionalidades comerciales reales, simulando un entorno
-          e-commerce enfocado en el sector de recubrimientos para interiores.
-        </p>
+        <!-- =============================== -->
+        <!--       FUNCIONALIDADES           -->
+        <!-- =============================== -->
+        <h5>Funcionalidades principales</h5>
 
-        <!-- ========================= -->
-        <!--      TECNOLOGÍAS          -->
-        <!-- ========================= -->
+        <ul>
+          <li>Catálogo dinámico de productos</li>
+          <li>Visualización de diseños de piso</li>
+          <li>Detalle técnico por producto</li>
+          <li>Calculadora de metros cuadrados</li>
+          <li>Cálculo automático de cajas</li>
+          <li>Cotización de material</li>
+          <li>Cálculo de mano de obra</li>
+        </ul>
+
+        <!-- =============================== -->
+        <!--        TECNOLOGÍAS              -->
+        <!-- =============================== -->
         <h5>Tecnologías utilizadas</h5>
 
         <ul>
-          <li>Frontend: HTML, CSS, JavaScript</li>
-          <li>Framework UI: Bootstrap</li>
-          <li>Backend: PHP</li>
-          <li>Base de datos: MySQL</li>
-          <li>Consultas SQL para productos</li>
-          <li>Formularios de cotización</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Bootstrap</li>
+          <li>PHP</li>
+          <li>MySQL</li>
+          <li>Consultas SQL</li>
         </ul>
 
-        <!-- ========================= -->
-        <!--        MI ROL             -->
-        <!-- ========================= -->
+        <!-- =============================== -->
+        <!--          MI ROL                 -->
+        <!-- =============================== -->
+        <h5>Mi participación</h5>
+
+        <ul>
+          <li>Desarrollo completo del sistema</li>
+          <li>Diseño de base de datos</li>
+          <li>Catálogo dinámico</li>
+          <li>Calculadora de m²</li>
+          <li>Lógica de cotización</li>
+          <li>Diseño UI/UX</li>
+        </ul>
 
       </div>
 
       <!-- FOOTER -->
       <div class="modal-footer border-0">
 
-        <!-- AQUÍ LUEGO PONES TU LINK -->
-        <a href="#" target="_blank" class="btn btn-outline-light">
-          https://github.com/202400248-hash/Proyecto---Escaner-Estudiantil.git
+        <a href="#"
+           target="_blank"
+           class="btn btn-outline-light">
+          Ver código en GitHub
         </a>
 
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal">
           Cerrar
         </button>
 
@@ -975,6 +1050,7 @@ code, .mono, .nav-code{
     </div>
   </div>
 </div>
+
 
 
 
