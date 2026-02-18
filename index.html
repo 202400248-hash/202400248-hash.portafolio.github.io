@@ -556,40 +556,45 @@ code, .mono, .nav-code{
   </div>
 </nav>
 
-<section id="home" class="hero">
- <div class="container-fluid hero-inner px-3">
+<<section id="home" class="hero">
+  <div class="container-fluid hero-inner px-3">
 
     <div>
 
-     <h1 class="hero-title">
-       <span class="d-block">Rosario</span>
-       <span class="d-block">Hernández</span>
-     </h1>
+      <!-- NOMBRE -->
+      <h1 class="hero-title">
+        <span class="d-block">Rosario</span>
+        <span class="d-block">Hernández</span>
+      </h1>
 
-      <p class="hero-sub">Software Engineer, Front End & App Developer.</p>
+      <!-- SUBTITULO -->
+      <p class="hero-sub">
+        Software Engineer, Front End & App Developer.
+      </p>
 
-      <!-- CORREO -->
-<!-- CORREO -->
-<button type="button"
-  class="contact-icon btn btn-outline-light"
-  data-bs-toggle="popover"
-  data-bs-placement="bottom"
-  data-bs-html="true"
-  data-bs-title="Correo"
-  data-bs-content='
-    <div class="d-flex align-items-center gap-2">
-      <span id="emailText">charitohernandez269@gmail.com</span>
-      <button class="btn btn-sm btn-primary" onclick="copyEmail()">Copiar</button>
-    </div>
-  '>
+      <!-- ICONOS CONTACTO -->
+      <div class="contact-icons-hero d-flex justify-content-center gap-3">
 
-  <i class="bi bi-envelope-fill"></i>
+        <!-- CORREO -->
+        <button type="button"
+          class="contact-icon btn btn-outline-light"
+          data-bs-toggle="popover"
+          data-bs-placement="bottom"
+          data-bs-html="true"
+          data-bs-title="Correo"
+          data-bs-content='
+            <div class="d-flex align-items-center gap-2">
+              <span id="emailText">charitohernandez269@gmail.com</span>
+              <button class="btn btn-sm btn-primary" onclick="copyEmail()">Copiar</button>
+            </div>
+          '>
 
-</button>
+          <i class="bi bi-envelope-fill"></i>
 
+        </button>
 
-      <!-- TELEFONO: muestra popover, NO abre tel -->
-  <button type="button"
+        <!-- TELEFONO -->
+        <button type="button"
           class="contact-icon btn btn-outline-light"
           data-bs-toggle="popover"
           data-bs-placement="bottom"
@@ -601,24 +606,33 @@ code, .mono, .nav-code{
               <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
             </div>
           '>
-    <i class="bi bi-telephone-fill"></i>
-  </button>
 
-          <!-- GITHUB -->
-          <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub" title="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
+          <i class="bi bi-telephone-fill"></i>
 
+        </button>
 
+        <!-- GITHUB -->
+        <a href="https://github.com/rosariohernandez"
+           target="_blank"
+           class="contact-icon btn btn-outline-light"
+           aria-label="GitHub"
+           title="GitHub">
 
+          <i class="bi bi-github"></i>
+
+        </a>
+
+      </div>
 
     </div>
   </div>
 
+  <!-- SCROLL -->
   <a href="#about" class="scroll-indicator" aria-label="Scroll">
     <i class="bi bi-arrow-down"></i>
   </a>
 </section>
+
 
 
 
