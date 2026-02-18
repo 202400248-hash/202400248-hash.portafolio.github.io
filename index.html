@@ -408,25 +408,26 @@ code, .mono, .nav-code{
 }
 
 .contact-icon{
-  width: 50px;
-  height: 50px;
-  border: 1px solid rgba(255,255,255,.2);
-  border-radius: 12px;
-  display: flex;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #9CA3AF;
-  font-size: 20px;
-  transition: .3s;
-  text-decoration: none;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: .25s ease;
+  background: rgba(0,0,0,.12);
 }
-
 
 .contact-icon:hover{
-  color: #22D3EE;
-  border-color: #22D3EE;
+  border-color: rgba(102,227,255,.45);
   transform: translateY(-3px);
 }
+
+
+
 
 
 
@@ -434,6 +435,8 @@ code, .mono, .nav-code{
   </style>
 
 </head>
+
+
 <body>
 
   <!-- Navbar -->
@@ -529,9 +532,15 @@ code, .mono, .nav-code{
         <div class="d-flex justify-content-center gap-3 mt-3">
 
           <!-- TELEFONO (llama directo en celular) -->
-          <a href="tel:+529984806010" class="contact-icon" aria-label="Llamar" title="Llamar">
-            <i class="bi bi-telephone-fill"></i>
-          </a>
+          <a href="#" class="contact-icon"
+   role="button"
+   data-bs-toggle="popover"
+   data-bs-placement="bottom"
+   data-bs-content="+52 998 480 6010"
+   aria-label="Teléfono">
+  <i class="bi bi-telephone-fill"></i>
+</a>
+
           <!-- GITHUB -->
           <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub" title="GitHub">
             <i class="bi bi-github"></i>
@@ -1075,6 +1084,12 @@ code, .mono, .nav-code{
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
+    new bootstrap.Popover(el, { trigger: 'click' });
+  });
+</script>
+
 </body>
 </html>
 
