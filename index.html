@@ -574,6 +574,27 @@ code, .mono, .nav-code{
 
       <p class="hero-sub">Software Engineer, Front End & App Developer.</p>
 
+      <!-- TELEFONO: muestra popover, NO abre tel -->
+  <button type="button"
+          class="contact-icon btn btn-outline-light"
+          data-bs-toggle="popover"
+          data-bs-placement="bottom"
+          data-bs-html="true"
+          data-bs-title="Teléfono"
+          data-bs-content='
+            <div class="d-flex align-items-center gap-2">
+              <span id="phoneText">+52 998 480 6010</span>
+              <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
+            </div>
+          '>
+    <i class="bi bi-telephone-fill"></i>
+  </button>
+
+          <!-- GITHUB -->
+          <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub" title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+
 
 
 
@@ -603,26 +624,7 @@ code, .mono, .nav-code{
 
       <div class="d-flex justify-content-center gap-3 mt-3">
 
-  <!-- TELEFONO: muestra popover, NO abre tel -->
-  <button type="button"
-          class="contact-icon btn btn-outline-light"
-          data-bs-toggle="popover"
-          data-bs-placement="bottom"
-          data-bs-html="true"
-          data-bs-title="Teléfono"
-          data-bs-content='
-            <div class="d-flex align-items-center gap-2">
-              <span id="phoneText">+52 998 480 6010</span>
-              <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
-            </div>
-          '>
-    <i class="bi bi-telephone-fill"></i>
-  </button>
-
-          <!-- GITHUB -->
-          <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub" title="GitHub">
-            <i class="bi bi-github"></i>
-          </a>
+  
 
         </div>
       </div>
