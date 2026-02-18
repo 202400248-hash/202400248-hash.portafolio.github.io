@@ -177,6 +177,21 @@ code, .mono, .nav-code{
 .navbar .navbar-brand span.dot{
   color: var(--accent2);
 }
+
+.navbar .container{
+  position: relative;
+}
+
+/* En desktop: el menú se centra respecto a la pantalla, no respecto al espacio sobrante */
+@media (min-width: 992px){
+  #navbarNav{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+}
+
 .nav-code{
   display: flex;
   flex-direction: column;
@@ -314,8 +329,9 @@ code, .mono, .nav-code{
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto gap-lg-4 align-items-lg-center">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+
 
         <li class="nav-item">
           <a class="nav-link active" href="#home">
