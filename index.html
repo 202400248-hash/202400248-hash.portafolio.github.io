@@ -563,6 +563,34 @@ code, .mono, .nav-code{
 .hero-about .row{
   margin-top: 0 !important;
 }
+/* FORZAR que suba el bloque Sobre Mi */
+#home.hero .hero-top{
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Si tienes la linea separadora como hr o pseudo-elemento */
+#home.hero .hero-divider,
+#home.hero .hero-top::after{
+  margin: 12px auto 0 !important;
+}
+
+/* Quita el exceso de padding del bloque de abajo */
+#home.hero .hero-about{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* El container py-5 es el que más separa */
+#home.hero .hero-about.container{
+  padding-top: 0 !important;
+  padding-bottom: 32px !important;
+}
+
+/* El row g-5 a veces mete separación grande */
+#home.hero .hero-about .row{
+  --bs-gutter-y: 1rem; /* en vez de g-5 (muy grande) */
+}
 
 
 
