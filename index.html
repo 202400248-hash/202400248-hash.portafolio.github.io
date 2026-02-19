@@ -592,6 +592,44 @@ code, .mono, .nav-code{
   --bs-gutter-y: 1rem; /* en vez de g-5 (muy grande) */
 }
 
+/* ===== AJUSTE FINAL: nombre más pequeño + “Sobre mi” más arriba ===== */
+
+/* 1) Haz más pequeño el nombre del HERO */
+#home.hero .hero-title{
+  font-size: clamp(3rem, 5.2vw, 5.2rem) !important;  /* reduce tamaño */
+  line-height: .92 !important;
+  letter-spacing: .06em !important;
+  margin-bottom: .6rem !important;
+}
+
+/* 2) Reduce un poco el espacio del subtítulo */
+#home.hero .hero-sub{
+  margin-bottom: .8rem !important;
+}
+
+/* 3) Baja el espacio de los iconos (para que no empujen hacia abajo) */
+#home.hero .hero-actions{
+  margin-top: .6rem !important;
+  margin-bottom: .6rem !important;
+}
+
+/* 4) Sube “Sobre mi” (más pegado al HERO) */
+#home.hero .hero-about{
+  padding-top: 0 !important;
+  margin-top: -10px !important; /* sube un poco (ajusta -6 a -16 si quieres más) */
+}
+
+/* 5) Reduce el padding del container de “Sobre mi” */
+#home.hero .hero-about.container{
+  padding-top: 0 !important;
+  padding-bottom: 28px !important;
+}
+
+/* 6) Mantén el row compacto (g-5 mete mucho aire) */
+#home.hero .hero-about .row{
+  --bs-gutter-y: .8rem !important;
+}
+
   </style>
 
 </head>
