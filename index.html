@@ -537,6 +537,35 @@ code, .mono, .nav-code{
   background: rgba(255,255,255,.12);
 }
 
+/* ====== AJUSTE: acercar HERO + SOBRE MI ====== */
+
+/* Menos espacio abajo del bloque de arriba */
+.hero-top{
+  padding-bottom: 12px !important;
+}
+
+/* Línea separadora más pegada */
+.hero-top::after{
+  margin: 16px auto 0 !important;
+}
+
+/* Menos espacio arriba del bloque "Sobre mi" */
+.hero-about{
+  padding-top: 12px !important;
+  padding-bottom: 40px !important;
+}
+
+/* Si tu .container trae mucho padding */
+.hero-about.container{
+  padding-top: 12px !important;
+}
+
+/* Opcional: si aún queda muy separado por el row */
+.hero-about .row{
+  margin-top: 0 !important;
+}
+
+
 
 
 
