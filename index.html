@@ -1225,25 +1225,27 @@ y el manejo adecuado de los registros del dispensario.
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
+
   // Inicializar popovers
   document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
     new bootstrap.Popover(el, { trigger: 'click' });
   });
 
   // Copiar teléfono
-  function copyPhone() {
-    navigator.clipboard.writeText("+529984806010");
-  }
+  function copyPhone(){
+  navigator.clipboard.writeText("+529984806010");
+  alert("Teléfono copiado");
+   }
 
-  
 </script>
 
 <script>
-function copyEmail() {
-  const text = document.getElementById("emailText").innerText;
-  navigator.clipboard.writeText(text);
-  alert("Correo copiado: " + text);
+  
+function copyEmail(){
+  navigator.clipboard.writeText("charitohernandez269@gmail.com");
+  alert("Correo copiado");
 }
 </script>
 
