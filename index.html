@@ -594,6 +594,35 @@ code, .mono, .nav-code{
   --bs-gutter-y: .8rem !important;
 }
 
+
+/* ===== SWAP: Hero-sub como lead + lead justificado ===== */
+
+/* 1) Justificar todo texto con class="lead" (solo dentro del home para no afectar todo) */
+#home .lead{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* 2) Este lead del HERO que se vea centrado (aunque sea justificado) */
+#home .hero-lead{
+  text-align: center !important;
+  margin: 0;
+  max-width: 950px;
+  margin-inline: auto;
+  color: rgba(232,238,247,.85);
+}
+
+/* 3) Los párrafos del ABOUT con estilo tipo hero-sub, pero SIN mayúsculas exageradas */
+#home .about-sub{
+  text-transform: none !important;     /* quita uppercase */
+  letter-spacing: .02em !important;    /* más natural */
+  font-size: 1.05rem !important;       /* tamaño cómodo */
+  line-height: 1.8 !important;
+  color: rgba(232,238,247,.85);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
   </style>
 
 </head>
@@ -655,7 +684,7 @@ code, .mono, .nav-code{
         <span class="d-block">Hernández</span>
       </h1>
 
-      <p class="hero-sub">Ingeniería TI e Innovación Digital, Desarrollador Web & Apps.</p>
+      <p class="lead hero-lead">Ingeniería TI e Innovación Digital, Desarrollador Web & Apps.</p>
 
       <div class="hero-actions d-flex justify-content-center gap-3 mt-4">
         <!-- CORREO -->
@@ -706,17 +735,20 @@ code, .mono, .nav-code{
         </div>
 
         <div class="col-lg-8">
-          <h2 class="section-title mb-4">Sobre Mi</h2>
+          <h2 class="section-title mb-3">Sobre Mi</h2>
 
-          <p class="lead">
-            Hola, soy estudiante de Ingeniería de Software con enfoque en desarrollo web y construcción de sistemas digitales.
+
+          <p class="hero-sub about-sub"> Hola, soy estudiante de Ingeniería de 
+            Software con enfoque en desarrollo web y construcción de sistemas digitales.
           </p>
 
-          <p class="lead">
-            Cuento con experiencia académica desarrollando aplicaciones web, plataformas con bases de datos y proyectos orientados a resolver
-            problemáticas reales mediante tecnología. Mi interés principal está en la arquitectura de software, el diseño de interfaces y la optimización de procesos.
-          </p>
-        </div>
+         <p class="hero-sub about-sub">Cuento con experiencia académica desarrollando 
+          aplicaciones web, plataformas con bases de datos y proyectos orientados a resolver
+          problemáticas reales mediante tecnología. Mi interés principal 
+          está en la arquitectura de software, el diseño de interfaces y la 
+          optimización de procesos.</p>
+
+         </div>
 
       </div>
     </div>
