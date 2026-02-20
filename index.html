@@ -649,7 +649,6 @@ code, .mono, .nav-code{
 <section id="home" class="hero">
   <div class="container-fluid hero-inner px-3">
 
-    <!-- ====== HERO (tu portada) ====== -->
     <div class="hero-top">
       <h1 class="hero-title">
         <span class="d-block">Rosario</span>
@@ -668,7 +667,7 @@ code, .mono, .nav-code{
           data-bs-title="Correo"
           data-bs-content='
             <div class="d-flex align-items-center gap-2">
-              <span id="emailText">charitohernandez269@gmail.com</span>
+              <span>charitohernandez269@gmail.com</span>
               <button class="btn btn-sm btn-primary" onclick="copyEmail()">Copiar</button>
             </div>
           '>
@@ -684,11 +683,10 @@ code, .mono, .nav-code{
           data-bs-title="Teléfono"
           data-bs-content='
             <div class="d-flex align-items-center gap-2">
-              <span id="phoneText">+52 998 480 6010</span>
+              <span>+52 998 480 6010</span>
               <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
             </div>
           '>
-
           <i class="bi bi-telephone-fill"></i>
         </button>
 
@@ -700,15 +698,13 @@ code, .mono, .nav-code{
       </div>
     </div>
 
-    <!-- ====== SOBRE MI (en la misma sección) ====== -->
-
     <div class="hero-about container pt-1 pb-4">
       <div class="row align-items-center g-5">
 
         <div class="col-lg-4 text-center">
           <img src="assets/img/yo.jpeg" alt="Rosario" class="avatar mb-3"/>
-          
         </div>
+
         <div class="col-lg-8">
           <h2 class="section-title mb-4">Sobre Mi</h2>
 
@@ -725,8 +721,12 @@ code, .mono, .nav-code{
       </div>
     </div>
 
+    <!-- Flecha dentro del HOME -->
+    <a href="#resume" class="scroll-indicator" aria-label="Scroll">
+      <i class="bi bi-arrow-down"></i>
+    </a>
+
   </div>
-    </div>
 </section>
 
 
@@ -1242,7 +1242,7 @@ y el manejo adecuado de los registros del dispensario.
 </script>
 
 <script>
-  
+
 function copyEmail(){
   navigator.clipboard.writeText("charitohernandez269@gmail.com");
   alert("Correo copiado");
