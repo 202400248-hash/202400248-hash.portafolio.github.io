@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Rosario Hernandez  | Estudiante de Ingenieria en Software</title>
-  <meta name="description" content="Ingeniero en Software | Desarrollo Full-Stack | React, Node.js, Python"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Rosario Hernandez | Estudiante de Ingenieria en Software</title>
+  <meta name="description" content="Ingeniero en Software | Desarrollo Full-Stack | React, Node.js, Python" />
 
   <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/simple-icons@13.7.0/index.min.js"></script>
 
   <style>
+    :root {
+      --bg: #070b12;
+      --card-bg: rgba(255, 255, 255, .04);
+      --text: #e8eef7;
+      --text-muted: rgba(232, 238, 247, .65);
+      --border: rgba(255, 255, 255, .10);
+      --accent: #66e3ff;
+      --accent2: #b27cff;
+      --glow: rgba(102, 227, 255, .25);
+      --nav-h: 78px;
+      /* altura aproximada de tu navbar */
+    }
 
- :root{
-  --bg: #070b12;
-  --card-bg: rgba(255,255,255,.04);
-  --text: #e8eef7;
-  --text-muted: rgba(232,238,247,.65);
-  --border: rgba(255,255,255,.10);
-  --accent: #66e3ff;
-  --accent2: #b27cff;
-  --glow: rgba(102,227,255,.25);
-  --nav-h: 78px; /* altura aproximada de tu navbar */
-}
-
-/* HERO (una sola definición, sin duplicados) */
-
-
-/* Contenido centrado perfecto */
-.hero-inner{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding-bottom: 50px; /* baja el bloque sin romper el centrado */
-  text-align: center;
-  transform: none;
-}
-
-/* Título (ajústalo aquí) */
-.hero-title{
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  line-height: .95;
-  margin: 0 0 14px 0;
-}
-
-/* Subtítulo */
-.hero-sub{
-  font-family: "Space Mono", monospace;
-  color: rgba(232,238,247,.85);
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  font-size: clamp(.85rem, 1.2vw, 1.05rem);
-  margin: 0;
-}
+    /* HERO (una sola definición, sin duplicados) */
 
 
-/* Fondo */
-.hero::before{
-  content:"";
-  position:absolute; inset:0;
-  background:
-    radial-gradient(900px 600px at 55% 30%, rgba(178,124,255,.22), transparent 60%),
-    radial-gradient(900px 650px at 30% 55%, rgba(102,227,255,.18), transparent 62%),
-    radial-gradient(700px 500px at 70% 70%, rgba(102,227,255,.10), transparent 65%),
-    linear-gradient(180deg, rgba(7,11,18,.86), rgba(7,11,18,.95));
-  z-index: -2;
-}
+    /* Contenido centrado perfecto */
+    .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+      /* baja el bloque sin romper el centrado */
+      text-align: center;
+      transform: none;
+    }
+
+    /* Título (ajústalo aquí) */
+    .hero-title {
+      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      line-height: .95;
+      margin: 0 0 14px 0;
+    }
+
+    /* Subtítulo */
+    .hero-sub {
+      font-family: "Space Mono", monospace;
+      color: rgba(232, 238, 247, .85);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: clamp(.85rem, 1.2vw, 1.05rem);
+      margin: 0;
+    }
+
+
+    /* Fondo */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 600px at 55% 30%, rgba(178, 124, 255, .22), transparent 60%),
+        radial-gradient(900px 650px at 30% 55%, rgba(102, 227, 255, .18), transparent 62%),
+        radial-gradient(700px 500px at 70% 70%, rgba(102, 227, 255, .10), transparent 65%),
+        linear-gradient(180deg, rgba(7, 11, 18, .86), rgba(7, 11, 18, .95));
+      z-index: -2;
+    }
 
 
 
@@ -82,516 +88,568 @@
 
 
     /* --- Resume / Educación estilo pro --- */
-.resume-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.25rem;
-}
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.25rem;
+    }
 
-@media (max-width: 992px){
-  .resume-grid { grid-template-columns: 1fr; }
-}
+    @media (max-width: 992px) {
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.mini-title {
-  letter-spacing: .5px;
-  text-transform: uppercase;
-  font-size: .85rem;
-  color: var(--text-muted);
-}
+    .mini-title {
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
 
-.chips { display: flex; flex-wrap: wrap; gap: .5rem; }
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  padding: .35rem .6rem;
-  border-radius: 999px;
-  background: #21262d;
-  border: 1px solid var(--border);
-  color: var(--text);
-  font-size: .85rem;
-}
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
 
-.chip i { color: var(--accent); }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      background: #21262d;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: .85rem;
+    }
 
-.kpi {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: .75rem;
-}
-.kpi .card { padding: 14px; }
-.kpi h6 { margin: 0; font-weight: 800; }
-.kpi p { margin: 0; color: var(--text-muted); font-size: .9rem; }
+    .chip i {
+      color: var(--accent);
+    }
 
-.list-clean { margin: 0; padding-left: 1.1rem; }
-.list-clean li { margin-bottom: .35rem; }
+    .kpi {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+    }
 
-.section-divider {
-  border-top: 1px solid var(--border);
-  margin: 2rem 0;
-  opacity: .8;
-}
+    .kpi .card {
+      padding: 14px;
+    }
 
-body{
-  background: var(--bg);
-  color: var(--text);
-  font-family: "Montserrat", system-ui, sans-serif;
-}
+    .kpi h6 {
+      margin: 0;
+      font-weight: 800;
+    }
 
-code, .mono, .nav-code{
-  font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-}
+    .kpi p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: .9rem;
+    }
 
-/* Navbar estilo tamalsen */
-.navbar{
-  background: rgba(7,11,18,.35) !important;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,.08) !important;
-  padding-top: 18px;
-  padding-bottom: 18px;
-}
-.navbar .navbar-brand{
-  font-weight: 800;
-  letter-spacing: .5px;
-}
-.navbar .navbar-brand span.dot{
-  color: var(--accent2);
-}
+    .list-clean {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
 
-.navbar .container{
-  position: relative;
-}
+    .list-clean li {
+      margin-bottom: .35rem;
+    }
 
-/* En desktop: el menú se centra respecto a la pantalla, no respecto al espacio sobrante */
-@media (min-width: 992px){
-  #navbarNav{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-  }
-}
+    .section-divider {
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+      opacity: .8;
+    }
 
-.nav-code{
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
-.nav-code small{
-  color: var(--text-muted);
-  font-size: .75rem;
-}
-.nav-code b{
-  font-weight: 700;
-  color: var(--text);
-}
-.nav-link{
-  color: var(--text) !important;
-  opacity: .9;
-}
-.nav-link:hover,
-.nav-link.active{
-  color: var(--accent) !important;
-  opacity: 1;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Montserrat", system-ui, sans-serif;
+    }
+
+    code,
+    .mono,
+    .nav-code {
+      font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    }
+
+    /* Navbar estilo tamalsen */
+    .navbar {
+      background: rgba(7, 11, 18, .35) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+      padding-top: 18px;
+      padding-bottom: 18px;
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .navbar .navbar-brand span.dot {
+      color: var(--accent2);
+    }
+
+    .navbar .container {
+      position: relative;
+    }
+
+    /* En desktop: el menú se centra respecto a la pantalla, no respecto al espacio sobrante */
+    @media (min-width: 992px) {
+      #navbarNav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+      }
+    }
+
+    .nav-code {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .nav-code small {
+      color: var(--text-muted);
+      font-size: .75rem;
+    }
+
+    .nav-code b {
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .nav-link {
+      color: var(--text) !important;
+      opacity: .9;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--accent) !important;
+      opacity: 1;
+    }
 
 
-.scroll-indicator{
-  position:absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 42px;
-  height: 62px;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 999px;
-  display:grid;
-  place-items:center;
-  background: rgba(0,0,0,.15);
-  backdrop-filter: blur(8px);
-}
-.scroll-indicator i{
-  color: var(--accent);
-  font-size: 1.2rem;
-  animation: bounce 1.2s infinite ease-in-out;
-}
+    .scroll-indicator {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 42px;
+      height: 62px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      background: rgba(0, 0, 0, .15);
+      backdrop-filter: blur(8px);
+    }
 
-#resume{
-  scroll-margin-top: calc(var(--nav-h) + 18px);
-}
+    .scroll-indicator i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    #resume {
+      scroll-margin-top: calc(var(--nav-h) + 18px);
+    }
 
 
-@keyframes bounce{
-  0%,100%{ transform: translateY(-2px); opacity:.8; }
-  50%{ transform: translateY(6px); opacity:1; }
-}
+    @keyframes bounce {
 
-/* --- UI base (importante para que se vea "pro") --- */
-.section-title{
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text);
-  position: relative;
-  display: inline-block;
-  padding-bottom: .6rem;
-}
-.section-title::after{
-  content:"";
-  position:absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 72px;
-  height: 3px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  box-shadow: 0 0 18px var(--glow);
-}
+      0%,
+      100% {
+        transform: translateY(-2px);
+        opacity: .8;
+      }
 
-#home .section-title{
-  font-size: 1.6rem;
-}
+      50% {
+        transform: translateY(6px);
+        opacity: 1;
+      }
+    }
 
-.card{
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
-}
+    /* --- UI base (importante para que se vea "pro") --- */
+    .section-title {
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--text);
+      position: relative;
+      display: inline-block;
+      padding-bottom: .6rem;
+    }
 
-.card:hover{
-  border-color: rgba(102,227,255,.35);
-}
-.avatar{
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 3px solid rgba(102,227,255,.55);
-  box-shadow: 0 0 30px rgba(102,227,255,.18);
-}
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      width: 72px;
+      height: 3px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 18px var(--glow);
+    }
 
-.text-muted{
-  color: var(--text-muted) !important;
-}
+    #home .section-title {
+      font-size: 1.6rem;
+    }
 
-.tech-badge{
-  background: rgba(255,255,255,.04);
-  border: 1px solid var(--border);
-  color: var(--text);
-}
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+    }
 
-.btn-accent{
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  border: 0;
-  color: #071018;
-  font-weight: 900;
-}
-.btn-accent:hover{
-  filter: brightness(1.06);
-}
+    .card:hover {
+      border-color: rgba(102, 227, 255, .35);
+    }
 
-/* Cards lift */
-.project-card{
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.project-card:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 24px 60px rgba(0,0,0,.5);
-  border-color: rgba(178,124,255,.35);
-}
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid rgba(102, 227, 255, .55);
+      box-shadow: 0 0 30px rgba(102, 227, 255, .18);
+    }
 
-/* ===== EXPERIENCE ===== */
+    .text-muted {
+      color: var(--text-muted) !important;
+    }
 
-.experience{
-  background: linear-gradient(
-    180deg,
-    rgba(7,11,18,.95),
-    rgba(7,11,18,1)
-  );
-}
+    .tech-badge {
+      background: rgba(255, 255, 255, .04);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
 
-.exp-title{
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: .05em;
-}
+    .btn-accent {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border: 0;
+      color: #071018;
+      font-weight: 900;
+    }
 
-/* Grid horizontal */
-.exp-grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid rgba(255,255,255,.15);
-}
+    .btn-accent:hover {
+      filter: brightness(1.06);
+    }
 
-@media(max-width: 992px){
-  .exp-grid{
-    grid-template-columns: 1fr;
-  }
-}
+    /* Cards lift */
+    .project-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
 
-/* Card */
-.exp-card{
-  padding: 48px 38px;
-  border-right: 1px solid rgba(255,255,255,.15);
-  transition: .3s;
-}
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+      border-color: rgba(178, 124, 255, .35);
+    }
 
-.exp-card:last-child{
-  border-right: none;
-}
+    /* ===== EXPERIENCE ===== */
 
-/* Hover */
-.exp-card:hover{
-  background: rgba(255,255,255,.02);
-}
+    .experience {
+      background: linear-gradient(180deg,
+          rgba(7, 11, 18, .95),
+          rgba(7, 11, 18, 1));
+    }
 
-/* Icon */
-.exp-icon{
-  font-size: 2.2rem;
-  margin-bottom: 18px;
-  color: var(--accent);
-}
+    .exp-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
 
-/* Title */
-.exp-card h3{
-  font-weight: 800;
-  margin-bottom: 18px;
-  line-height: 1.2;
-}
+    /* Grid horizontal */
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255, 255, 255, .15);
+    }
 
-/* Text */
-.exp-card p{
-  color: var(--text-muted);
-  line-height: 1.6;
-  font-family: "Space Mono", monospace;
-}
+    @media(max-width: 992px) {
+      .exp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-/* Accent words */
-.accent{
-  color: #4c6fff;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-}
+    /* Card */
+    .exp-card {
+      padding: 48px 38px;
+      border-right: 1px solid rgba(255, 255, 255, .15);
+      transition: .3s;
+    }
 
-.accent2{
-  color: #ff7a18;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-}
+    .exp-card:last-child {
+      border-right: none;
+    }
 
-.contact-icon{
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 12px;
-  color: #fff;
-  font-size: 1.2rem;
-  transition: .25s ease;
-  background: rgba(0,0,0,.12);
-}
+    /* Hover */
+    .exp-card:hover {
+      background: rgba(255, 255, 255, .02);
+    }
 
-.contact-icon:hover{
-  border-color: rgba(102,227,255,.45);
-  transform: translateY(-3px);
-}
+    /* Icon */
+    .exp-icon {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
 
-/* ====== PROYECTOS (estilo tipo ejemplo) ====== */
-.projects-grid .card{
-  border-radius: 22px;
-  overflow: hidden;
-  background: rgba(255,255,255,.03);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 18px 40px rgba(0,0,0,.35);
-}
+    /* Title */
+    .exp-card h3 {
+      font-weight: 800;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
 
-.project-thumb{
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  filter: saturate(1.05) contrast(1.02);
-}
+    /* Text */
+    .exp-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-family: "Space Mono", monospace;
+    }
 
-.project-body{
-  padding: 18px 18px 16px;
-}
+    /* Accent words */
+    .accent {
+      color: #4c6fff;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
 
-.project-title{
-  font-weight: 900;
-  margin: 0 0 6px;
-  font-size: 1.35rem;
-}
+    .accent2 {
+      color: #ff7a18;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
 
-.project-desc{
-  margin: 0 0 14px;
-  color: rgba(232,238,247,.65);
-  font-family: "Space Mono", monospace;
-  font-size: .95rem;
-  line-height: 1.55;
-}
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 12px;
+      color: #fff;
+      font-size: 1.2rem;
+      transition: .25s ease;
+      background: rgba(0, 0, 0, .12);
+    }
 
-.project-tags{
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-  margin: 0 0 14px;
-}
-.project-tag{
-  padding: .28rem .6rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  color: rgba(232,238,247,.80);
-  font-size: .82rem;
-  font-weight: 700;
-}
+    .contact-icon:hover {
+      border-color: rgba(102, 227, 255, .45);
+      transform: translateY(-3px);
+    }
 
-.project-link{
-  display: inline-flex;
-  align-items: center;
-  gap: .5rem;
-  text-decoration: none;
-  font-weight: 800;
-  color: var(--accent);
-}
-.project-link:hover{
-  color: white;
-}
+    /* ====== PROYECTOS (estilo tipo ejemplo) ====== */
+    .projects-grid .card {
+      border-radius: 22px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, .03);
+      border: 1px solid rgba(255, 255, 255, .10);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+    }
 
-.project-card2{
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-}
-.project-card2:hover{
-  transform: translateY(-10px);
-  box-shadow: 0 26px 70px rgba(0,0,0,.55);
-  border-color: rgba(102,227,255,.35);
-}
- 
-/* home y presentacion sobre mi */
-/* Evita que HERO se coma toda la pantalla */
-.hero{
-  min-height: auto !important;
-  height: auto !important;
-  padding: 80px 0 40px;
-}
+    .project-thumb {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      filter: saturate(1.05) contrast(1.02);
+    }
 
-/* Si tenías height/min-height en hero-inner, lo anulamos */
-.hero-inner{
-  min-height: auto !important;
-  height: auto !important;
-  display: flex;
-  flex-direction: column;
-}
+    .project-body {
+      padding: 18px 18px 16px;
+    }
 
-/* Portada centrada y con separación controlada */
-.hero-top{
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 30px;
-}
+    .project-title {
+      font-weight: 900;
+      margin: 0 0 6px;
+      font-size: 1.35rem;
+    }
 
-/* Sección “Sobre mí” dentro del mismo home */
-.hero-about{
-  padding-top: 40px !important;
-  padding-bottom: 60px !important;
-}
+    .project-desc {
+      margin: 0 0 14px;
+      color: rgba(232, 238, 247, .65);
+      font-family: "Space Mono", monospace;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
 
-/* =========================
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+      margin: 0 0 14px;
+    }
+
+    .project-tag {
+      padding: .28rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, .12);
+      background: rgba(255, 255, 255, .03);
+      color: rgba(232, 238, 247, .80);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .project-link:hover {
+      color: white;
+    }
+
+    .project-card2 {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .project-card2:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, .55);
+      border-color: rgba(102, 227, 255, .35);
+    }
+
+    /* home y presentacion sobre mi */
+    /* Evita que HERO se coma toda la pantalla */
+    .hero {
+      min-height: auto !important;
+      height: auto !important;
+      padding: 80px 0 40px;
+    }
+
+    /* Si tenías height/min-height en hero-inner, lo anulamos */
+    .hero-inner {
+      min-height: auto !important;
+      height: auto !important;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Portada centrada y con separación controlada */
+    .hero-top {
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
+    /* Sección “Sobre mí” dentro del mismo home */
+    .hero-about {
+      padding-top: 40px !important;
+      padding-bottom: 60px !important;
+    }
+
+    /* =========================
    HOME (HERO + SOBRE MI)
    ========================= */
 
-/* Ajusta altura con navbar fijo */
-#home.hero{
-  position: relative;
-  overflow: hidden;
-  padding-top: var(--nav-h);
-  padding-bottom: 40px;
-}
+    /* Ajusta altura con navbar fijo */
+    #home.hero {
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--nav-h);
+      padding-bottom: 40px;
+    }
 
-/* contenedor */
-#home .hero-inner{
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 18px; /* acerca secciones sin usar hacks */
-}
+    /* contenedor */
+    #home .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      /* acerca secciones sin usar hacks */
+    }
 
-/* titulo grande (reduce tamaño aquí) */
-#home .hero-title{
-  font-size: clamp(2.6rem, 4.6vw, 3.9rem);
-  font-weight: 900;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  line-height: .95;
-  margin: 0;
-}
+    /* titulo grande (reduce tamaño aquí) */
+    #home .hero-title {
+      font-size: clamp(2.6rem, 4.6vw, 3.9rem);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      line-height: .95;
+      margin: 0;
+    }
 
-/* Bloque top (reduce espacio aquí) */
-#home .hero-top{
-  padding-top: 8px;
-  padding-bottom: 4px;
-}
+    /* Bloque top (reduce espacio aquí) */
+    #home .hero-top {
+      padding-top: 8px;
+      padding-bottom: 4px;
+    }
 
-/* linea separadora */
-#home .hero-top::after{
-  content: "";
-  display: block;
-  width: min(900px, 85%);
-  height: 1px;
-  margin: 8px auto 0;
-  background: rgba(255,255,255,.12);
-}
-/* Iconos: acerca al texto */
-#home .hero-actions{
-  margin-top: 12px !important;
-}
+    /* linea separadora */
+    #home .hero-top::after {
+      content: "";
+      display: block;
+      width: min(900px, 85%);
+      height: 1px;
+      margin: 8px auto 0;
+      background: rgba(255, 255, 255, .12);
+    }
 
-/* Sobre mi: sube / acerca aquí */
-#home .hero-about{
-  padding-top: 6px !important;
-  padding-bottom: 26px !important;
-}
+    /* Iconos: acerca al texto */
+    #home .hero-actions {
+      margin-top: 12px !important;
+    }
 
-#home .hero-about .row{
-  --bs-gutter-y: .8rem;
-}
+    /* Sobre mi: sube / acerca aquí */
+    #home .hero-about {
+      padding-top: 6px !important;
+      padding-bottom: 26px !important;
+    }
+
+    #home .hero-about .row {
+      --bs-gutter-y: .8rem;
+    }
 
 
-/* ===== SWAP: Hero-sub como lead + lead justificado ===== */
+    /* ===== SWAP: Hero-sub como lead + lead justificado ===== */
 
-/* 1) Justificar todo texto con class="lead" (solo dentro del home para no afectar todo) */
-#home .lead{
-  text-align: justify;
-  text-justify: inter-word;
-}
-/* 2) Este lead del HERO que se vea centrado (aunque sea justificado) */
-#home .hero-lead{
-  text-align: center !important;
-  margin: 0;
-  max-width: 950px;
-  margin-inline: auto;
-  color: rgba(232,238,247,.85);
-}
+    /* 1) Justificar todo texto con class="lead" (solo dentro del home para no afectar todo) */
+    #home .lead {
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
-/* 3) Texto del about con estilo tipo hero-sub */
-#home .about-sub{
-  font-family: "Space Mono", monospace;
-  color: rgba(232,238,247,.85);
-  letter-spacing: .06em;
-  font-size: 1.02rem;
-  line-height: 1.85;
-  text-align: justify;
-  text-justify: inter-word;
-}
+    /* 2) Este lead del HERO que se vea centrado (aunque sea justificado) */
+    #home .hero-lead {
+      text-align: center !important;
+      margin: 0;
+      max-width: 950px;
+      margin-inline: auto;
+      color: rgba(232, 238, 247, .85);
+    }
 
-</style>
+    /* 3) Texto del about con estilo tipo hero-sub */
+    #home .about-sub {
+      font-family: "Space Mono", monospace;
+      color: rgba(232, 238, 247, .85);
+      letter-spacing: .06em;
+      font-size: 1.02rem;
+      line-height: 1.85;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+  </style>
 
 </head>
 
@@ -600,657 +658,676 @@ code, .mono, .nav-code{
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold fs-4" href="#home" style="color: var(--accent);">
-    RosarioHer<span class="dot">._</span>
-    </a>
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#home" style="color: var(--accent);">
+        RosarioHer<span class="dot">._</span>
+      </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav gap-lg-4 align-items-lg-center">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-lg-4 align-items-lg-center">
 
 
-        <li class="nav-item">
-          <a class="nav-link active" href="#home">
-            <span class="nav-code"><b>//home</b></span>
-          </a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">
+              <span class="nav-code"><b>//home</b></span>
+            </a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#resume">
-            <span class="nav-code"><b>//resume</b></span>
-          </a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#resume">
+              <span class="nav-code"><b>//resume</b></span>
+            </a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#Experiencia">
-            <span class="nav-code"><b>//experiencia</b></span>
-          </a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Experiencia">
+              <span class="nav-code"><b>//experiencia</b></span>
+            </a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="#Proyectos">
-            <span class="nav-code"><b>//proyectos </b></span>
-          </a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Proyectos">
+              <span class="nav-code"><b>//proyectos </b></span>
+            </a>
+          </li>
 
-      </ul>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- ====== Home y presentacion sobre mi  ====== -->
-<section id="home" class="hero">
-  <div class="container-fluid hero-inner px-3">
+  <!-- ====== Home y presentacion sobre mi  ====== -->
+  <section id="home" class="hero">
+    <div class="container-fluid hero-inner px-3">
 
-    <div class="hero-top">
-      <h1 class="hero-title">
-        <span class="d-block">Rosario</span>
-        <span class="d-block">Hernández</span>
-      </h1>
+      <div class="hero-top">
+        <h1 class="hero-title">
+          <span class="d-block">Rosario</span>
+          <span class="d-block">Hernández</span>
+        </h1>
 
-      <p class="lead hero-lead">Ingeniería TI e Innovación Digital, Desarrollador Web & Apps.</p>
+        <p class="lead hero-lead">Ingeniería TI e Innovación Digital, Desarrollador Web & Apps.</p>
 
-      <div class="hero-actions d-flex justify-content-center gap-3 mt-4">
-        <!-- CORREO -->
-        <button type="button"
-          class="contact-icon btn btn-outline-light"
-          data-bs-toggle="popover"
-          data-bs-placement="bottom"
-          data-bs-html="true"
-          data-bs-title="Correo"
-          data-bs-content='
+        <div class="hero-actions d-flex justify-content-center gap-3 mt-4">
+          <!-- CORREO -->
+          <button type="button" class="contact-icon btn btn-outline-light" data-bs-toggle="popover"
+            data-bs-placement="bottom" data-bs-html="true" data-bs-title="Correo" data-bs-content='
             <div class="d-flex align-items-center gap-2">
               <span>charitohernandez269@gmail.com</span>
               <button class="btn btn-sm btn-primary" onclick="copyEmail()">Copiar</button>
             </div>
           '>
-          <i class="bi bi-envelope-fill"></i>
-        </button>
+            <i class="bi bi-envelope-fill"></i>
+          </button>
 
-        <!-- TEL -->
-        <button type="button"
-          class="contact-icon btn btn-outline-light"
-          data-bs-toggle="popover"
-          data-bs-placement="bottom"
-          data-bs-html="true"
-          data-bs-title="Teléfono"
-          data-bs-content='
+          <!-- TEL -->
+          <button type="button" class="contact-icon btn btn-outline-light" data-bs-toggle="popover"
+            data-bs-placement="bottom" data-bs-html="true" data-bs-title="Teléfono" data-bs-content='
             <div class="d-flex align-items-center gap-2">
               <span>+52 998 480 6010</span>
               <button class="btn btn-sm btn-primary" onclick="copyPhone()">Copiar</button>
             </div>
           '>
-          <i class="bi bi-telephone-fill"></i>
-        </button>
+            <i class="bi bi-telephone-fill"></i>
+          </button>
 
-        <!-- GITHUB -->
-        <a href="https://github.com/rosariohernandez" target="_blank"
-          class="contact-icon" aria-label="GitHub" title="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-about container pt-1 pb-4">
-      <div class="row align-items-center g-5">
-
-        <div class="col-lg-4 text-center">
-          <img src="assets/img/yo.jpeg" alt="Rosario" class="avatar mb-3"/>
+          <!-- GITHUB -->
+          <a href="https://github.com/rosariohernandez" target="_blank" class="contact-icon" aria-label="GitHub"
+            title="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
         </div>
-
-        <div class="col-lg-8">
-          <h2 class="section-title mb-3">Sobre Mi</h2>
-
-
-          <p class="about-sub"> Hola, soy Ingeniería en Tecnologías de la Información
-             e Innovación Digital con enfoque en desarrollo web y construcción de 
-             sistemas digitales.
-          </p>
-
-         <p class="about-sub">Cuento con experiencia académica desarrollando 
-          aplicaciones web, plataformas con bases de datos y proyectos orientados a resolver
-          problemáticas reales mediante tecnología. Mi interés principal 
-          está en la arquitectura de software, el diseño de interfaces y la 
-          optimización de procesos.</p>
-
-         </div>
       </div>
-    </div>
 
-    
-    <!-- Flecha dentro del HOME -->
-    <a href="#resume" class="scroll-indicator" aria-label="Scroll">
-      <i class="bi bi-arrow-down"></i>
-    </a>
+      <div class="hero-about container pt-1 pb-4">
+        <div class="row align-items-center g-5">
 
-  </div>
-</section>
+          <div class="col-lg-4 text-center">
+            <img src="assets/img/yo.jpeg" alt="Rosario" class="avatar mb-3" />
+          </div>
+
+          <div class="col-lg-8">
+            <h2 class="section-title mb-3">Sobre Mi</h2>
 
 
- <!-- Resume -->
-<section id="resume" class="py-5 bg-black bg-opacity-25">
-  <div class="container">
-    <h2 class="section-title text-center mb-2">Resumen</h2>
-    <p class="text-center text-muted mb-5">
-      Formación académica y perfil profesional
-    </p>
-    <div class="resume-grid">
-
-      <!-- Columna izquierda -->
-      <div>
-        <div class="card">
-          <div class="card-body">
-            <div class="mini-title mb-2">Educación</div>
-            <h4 class="mb-1">Ingeniería en Tecnologías de la Información e Innovación Digital</h4>
-            <p class="text-muted mb-3">
-              Universidad Politécnica de Quintana Roo 
-            </p>
-            <p class="text-muted mb-3">
-             Actualmente cursando • 5° Cuatrimestre
+            <p class="about-sub"> Hola, soy Ingeniería en Tecnologías de la Información
+              e Innovación Digital con enfoque en desarrollo web y construcción de
+              sistemas digitales.
             </p>
 
-            <div class="section-divider"></div>
-
-
-            <div class="mini-title mb-2">Materias fuertes / Áreas</div>
-            <ul class="list-clean">
-              <li><b>Bases de Datos</b> (modelado, consultas, CRUD)</li>
-              <li><b>Desarrollo Web</b> (frontend y backend)</li>
-              <li><b>UX/UI</b> (diseño de interfaz, usabilidad)</li>
-              <li><b>Frontend</b> (HTML/CSS, Bootstrap)</li>
-              <li><b>Backend</b> (lógica y conexión a BD)</li>
-              <li>Otras: análisis, documentación, pruebas</li>
-            </ul>
-
-            <div class="section-divider"></div>
-
-        
-          </div>
-        </div>
-      </div>
-
-      <!-- Columna derecha (NUEVA: un solo cuadro grande) -->
-      <div>
-        <div class="card">
-          <div class="card-body">
-
-            <div class="mini-title mb-2">Enfoque</div>
-            <h4 class="mb-1">UX/UI + Desarrollo Web</h4>
-            <p class="text-muted mb-0">
-              Interfaces limpias, usabilidad y desarrollo de sistemas conectados a base de datos.
-            </p>
-
-            <div class="section-divider"></div>
-
-            <div class="mini-title mb-2">Herramientas y tecnologías</div>
-            <div class="chips">
-              <span class="chip"><i class="bi bi-window"></i> Bootstrap</span>
-              <span class="chip"><i class="bi bi-braces"></i> HTML/CSS</span>
-              <span class="chip"><i class="bi bi-lightning"></i> JavaScript</span>
-              <span class="chip"><i class="bi bi-code-slash"></i> PHP</span>
-              <span class="chip"><i class="bi bi-database"></i> MySQL</span>
-              <span class="chip"><i class="bi bi-database"></i> SQL</span>
-              <span class="chip"><i class="bi bi-database"></i> SQL Server</span>
-              <span class="chip"><i class="bi bi-palette"></i> Figma</span>
-              <span class="chip"><i class="bi bi-git"></i> Git</span>
-              <span class="chip"><i class="bi bi-github"></i> GitHub</span>
-            </div>
+            <p class="about-sub">Cuento con experiencia académica desarrollando
+              aplicaciones web, plataformas con bases de datos y proyectos orientados a resolver
+              problemáticas reales mediante tecnología. Mi interés principal
+              está en la arquitectura de software, el diseño de interfaces y la
+              optimización de procesos.</p>
 
           </div>
         </div>
       </div>
+
+
+      <!-- Flecha dentro del HOME -->
+      <a href="#resume" class="scroll-indicator" aria-label="Scroll">
+        <i class="bi bi-arrow-down"></i>
+      </a>
 
     </div>
-  </div>
-</section>
+  </section>
 
 
-<section id="experiencia" class="experience py-5">
-  <div class="container">
+  <!-- Resume -->
+  <section id="resume" class="py-5 bg-black bg-opacity-25">
+    <div class="container">
+      <h2 class="section-title text-center mb-2">Resumen</h2>
+      <p class="text-center text-muted mb-5">
+        Formación académica y perfil profesional
+      </p>
+      <div class="resume-grid">
 
-    <h2 class="exp-title text-center mb-5">Mi experiencia</h2>
+        <!-- Columna izquierda -->
+        <div>
+          <div class="card">
+            <div class="card-body">
+              <div class="mini-title mb-2">Educación</div>
+              <h4 class="mb-1">Ingeniería en Tecnologías de la Información e Innovación Digital</h4>
+              <p class="text-muted mb-3">
+                Universidad Politécnica de Quintana Roo
+              </p>
+              <p class="text-muted mb-3">
+                Actualmente cursando • 5° Cuatrimestre
+              </p>
 
-    <div class="exp-grid">
-
-      <!-- Card 1 -->
-      <div class="exp-card">
-        <i class="bi bi-display exp-icon"></i>
-
-        <h3>Desarrollo de software</h3>
-
-        <p>
-          Conocimientos en programación estructurada y orientada a objetos.
-          Experiencia académica trabajando con lenguajes como C#, Java y C++,
-          aplicando lógica de programación, clases, métodos y estructuras de control.
-          Actualmente continúo en constante aprendizaje y práctica.
-        </p>
-      </div>
-
-      <!-- Card 2 (se queda igual) -->
-      <div class="exp-card">
-        <i class="bi bi-code-slash exp-icon"></i>
-
-        <h3>
-          Desarrollo <span class="accent">frontend</span><br>
-          React, NextJS
-        </h3>
-
-        <p>
-          Apasionado por la UI/UX. Desarrollo de interfaces modernas
-          utilizando HTML, CSS, JavaScript, React y NextJS.
-        </p>
-      </div>
-
-      <!-- Card 3 CAMBIADA -->
-      <div class="exp-card">
-        <i class="bi bi-database exp-icon"></i>
-
-        <h3>
-          Gestión de <span class="accent2">Bases de Datos</span><br>
-          MySQL
-        </h3>
-
-   <p>
-  Experiencia académica con MySQL: diseño de BD relacionales, <b>normalización</b>,
-  relaciones, consultas SQL (JOIN, GROUP BY), <b>CRUD</b> y generación de <b>reportes</b>.
-</p>
-
-      </div>
-
-    </div>
-  </div>
-</section>
+              <div class="section-divider"></div>
 
 
+              <div class="mini-title mb-2">Materias fuertes / Áreas</div>
+              <ul class="list-clean">
+                <li><b>Bases de Datos</b> (modelado, consultas, CRUD)</li>
+                <li><b>Desarrollo Web</b> (frontend y backend)</li>
+                <li><b>UX/UI</b> (diseño de interfaz, usabilidad)</li>
+                <li><b>Frontend</b> (HTML/CSS, Bootstrap)</li>
+                <li><b>Backend</b> (lógica y conexión a BD)</li>
+                <li>Otras: análisis, documentación, pruebas.</li>
+              </ul>
 
-<section id="proyectos" class="py-5">
-  <div class="container">
-    <h2 class="section-title text-center mb-5">Proyectos</h2>
-
-    <div class="row g-4 projects-grid">
-
-      <!-- Proyecto 1 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card2 h-100">
-          <img src="assets/img/FondoPisos.png" class="project-thumb" alt="Pisos del Caribe">
-          <div class="project-body">
-            <h3 class="project-title">Pisos del Caribe</h3>
-            <p class="project-desc">E-commerce / Catálogo web</p>
-
-            <div class="project-tags">
-              <span class="project-tag">PHP</span>
-              <span class="project-tag">Bootstrap</span>
-              <span class="project-tag">MySQL</span>
-            </div>
-
-            <!-- ABRE MODAL -->
-            <a class="project-link"
-               href="#"
-               data-bs-toggle="modal"
-               data-bs-target="#modalProyecto1"
-               onclick="event.preventDefault()">
-              Ver proyecto <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto 2 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card2 h-100">
-          <img src="assets/img/fondoEscaner.png" class="project-thumb" alt="ScannerEdu">
-          <div class="project-body">
-            <h3 class="project-title">ScannerEdu</h3>
-            <p class="project-desc">Diseño de Interfaz </p>
-
-            <div class="project-tags">
-              <span class="project-tag">PHP</span>
-              <span class="project-tag">UX/UI</span>
-            </div>
-            <!-- ABRE MODAL -->
-            <a class="project-link"
-               href="#"
-               data-bs-toggle="modal"
-               data-bs-target="#modalProyecto2"
-               onclick="event.preventDefault()">
-              Ver proyecto <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto 3 -->
-      <div class="col-md-6 col-lg-4">
-        <div class="card project-card2 h-100">
-          <img src="assets/img/fondoFarmacia.png" class="project-thumb" alt="Salud Total">
-          <div class="project-body">
-            <h3 class="project-title">Salud Total</h3>
-            <p class="project-desc">Sistema web para farmacia</p>
-
-            <div class="project-tags">
-              <span class="project-tag">PHP</span>
-              <span class="project-tag">MySQL</span>
-              <span class="project-tag">Bootstrap</span>
-            </div>
-
-            <!-- ABRE MODAL -->
-            <a class="project-link"
-               href="#"
-               data-bs-toggle="modal"
-               data-bs-target="#modalProyecto3"
-               onclick="event.preventDefault()">
-              Ver proyecto <i class="bi bi-arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+              <div class="section-divider"></div>
 
 
-<!-- ============================================= -->
-<!--                  MODALES                     -->
-
-
-<!-- Modal Proyecto 1 -->
-<div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="modalProyecto1Label">Pisos Del Caribe </h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Carrusel de imágenes -->
-        <div id="carouselProyecto1" class="carousel slide mb-4" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/img/Piso1.png" class="d-block w-100 rounded" alt="Pantalla principal">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Piso2.png" class="d-block w-100 rounded" alt="Lista de tareas">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Piso3.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-             <div class="carousel-item">
-              <img src="assets/img/Piso4.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-             <div class="carousel-item">
-              <img src="assets/img/Piso5.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-             <div class="carousel-item">
-              <img src="assets/img/Piso6.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
         </div>
 
-        <!-- Descripción detallada -->
-<h5>Descripción</h5>
+        <!-- Columna derecha (NUEVA: un solo cuadro grande) -->
+        <div>
+          <div class="card">
+            <div class="card-body">
 
-<p>
-<b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital
-y cotizador interactivo para la venta e instalación de pisos vinílicos tipo SPC,
-duela y laminados.
-</p>
+              <div class="mini-title mb-2">Enfoque</div>
+              <h4 class="mb-1">UX/UI + Desarrollo Web</h4>
+              <p class="text-muted mb-0">
+                Interfaces limpias, usabilidad y desarrollo de sistemas conectados a base de datos.
+              </p>
 
-<p>
-El sistema permite visualizar modelos de productos, consultar características
-técnicas y explorar distintas colecciones mediante un catálogo dinámico orientado
-a la experiencia del cliente.
-</p>
+              <div class="section-divider"></div>
 
-<p>
-Integra una calculadora de metros cuadrados que estima automáticamente la cantidad
-de material necesario, número de cajas y costos aproximados de instalación,
-optimizando el proceso de cotización de manera rápida y precisa.
-</p>
+              <div class="mini-title mb-2">Herramientas y tecnologías</div>
+              <div class="chips">
 
-<p>
-El proyecto simula un entorno comercial real, combinando funcionalidades de
-e-commerce, gestión de productos y herramientas de cálculo enfocadas al sector
-de recubrimientos para interiores.
-</p>
+                <span class="chip">
+                  <span class="tech-icon" data-icon="bootstrap"></span> Bootstrap
+                </span>
 
-<h5>Tecnologías utilizadas</h5>
+                <span class="chip">
+                  <span class="tech-icon" data-icon="html5"></span> HTML5
+                </span>
 
-<ul>
-  <li>Frontend: HTML, CSS, JavaScript</li>
-  <li>Framework UI: Bootstrap</li>
-  <li>Backend: PHP</li>
-  <li>Base de datos: MySQL</li>
-  <li>Consultas SQL dinámicas</li>
-  <li>Formularios de cotización</li>
-</ul>
+                <span class="chip">
+                  <span class="tech-icon" data-icon="css3"></span> CSS3
+                </span>
 
-      </div>
-      <div class="modal-footer border-0">
-        <a href="https://github.com/202400248-hash/Proyecto---Pisos-Del-Caribe.git" target="_blank" class="btn btn-outline-light">Ver código en GitHub</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <span class="chip">
+                  <span class="tech-icon" data-icon="javascript"></span> JavaScript
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="php"></span> PHP
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="mysql"></span> MySQL
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="microsoftsqlserver"></span> SQL Server
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="figma"></span> Figma
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="git"></span> Git
+                </span>
+
+                <span class="chip">
+                  <span class="tech-icon" data-icon="github"></span> GitHub
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
-</div>
-
-<!-- Modal Proyecto 2 -->
-<div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="modalProyecto2Label">App de Gestión de Tareas</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Carrusel de imágenes -->
-        <div id="carouselProyecto2" class="carousel slide mb-4" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/img/Scaner1.jpeg" class="d-block w-100 rounded" alt="Pantalla principal">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Scaner2.jpeg" class="d-block w-100 rounded" alt="Lista de tareas">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Scaner3.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/scaner4.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-            
-    
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto2" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-
-        <!-- Descripción detallada -->
-   <h5>Descripción</h5>
-
-<p>
-<b>ScannerEdu</b> es una interfaz web diseñada para el registro y control de estudiantes
-mediante escaneo de códigos QR, permitiendo validar accesos de forma rápida,
-automatizada y segura dentro de un entorno institucional.
-</p>
-
-<p>
-El sistema simula el flujo de ingreso a instalaciones educativas,
-mostrando en tiempo real el estado del escaneo, la verificación del usuario
-y la confirmación de acceso dentro de la plataforma.
-</p>
-
-<p>
-El proyecto se enfocó en la optimización del proceso de registro,
-buscando reducir tiempos de validación manual y mejorar la organización
-del control estudiantil mediante soluciones digitales.
-</p>
-
-<h5>Tecnologías utilizadas</h5>
-
-<ul>
-  <li>Diseño de interfaz: Figma</li>
-  <li>UX/UI enfocado en experiencia de escaneo</li>
-  <li>Prototipado web responsive</li>
-  <li>Flujos de validación de usuarios</li>
-  <li>Diseño visual orientado a sistemas institucionales</li>
-</ul>
+  </section>
 
 
-
-       
-      </div>  
-      <div class="modal-footer border-0">
-        <a href="https://www.figma.com/design/Mf53xwyan7CsoYFVlsomCX/Tocino?node-id=0-1&m=dev&t=kqpB2LaC4lqHeEP1-1" target="_blank" class="btn btn-outline-light">Ver Diseño en Figma</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Proyecto 3 -->
-
-<div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header border-0">
-        <h5 class="modal-title" id="modalProyecto3Label">Dispensario Medico</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Carrusel de imágenes -->
-        <div id="carouselProyecto3" class="carousel slide mb-4" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/img/Farmacia1.png" class="d-block w-100 rounded" alt="Pantalla principal">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Farmacia2.png" class="d-block w-100 rounded" alt="Lista de tareas">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Farmacia3.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/Farmacia4.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-
-            <div class="carousel-item">
-              <img src="assets/img/Farmacia5.png" class="d-block w-100 rounded" alt="Drag & drop">
-            </div>
-
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto3" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto3" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
-        </div>
-
-        <!-- Descripción detallada -->
-
-     <h5>Descripción</h5>
-
-<p>
-<b>Salud Total</b> es un sistema web desarrollado para la administración del
-dispensario médico institucional, enfocado en la gestión digital de medicamentos,
-control de proveedores y administración de accesos de usuarios.
-</p>
-
-<p>
-La plataforma permite registrar, consultar, actualizar y eliminar medicamentos
-mediante operaciones CRUD, facilitando el control del inventario y la disponibilidad
-de insumos médicos en tiempo real.
-</p>
-
-<p>
-Además, integra un sistema de autenticación con sesiones que restringe el acceso
-únicamente al personal autorizado, garantizando la seguridad de la información
-y el manejo adecuado de los registros del dispensario.
-</p>
-
-<h5>Tecnologías utilizadas</h5>
-
-<ul>
-  <li>Frontend: HTML, CSS, JavaScript</li>
-  <li>Framework UI: Bootstrap</li>
-  <li>Backend: PHP</li>
-  <li>Base de datos: MySQL</li>
-  <li>Métodos de envío: GET y POST</li>
-  <li>Gestión de sesiones: PHP Sessions</li>
-</ul>
-
-
-
-      <div class="modal-footer border-0">
-        <a href="https://github.com/202400248-hash/Proyecto---Farmacia.git" target="_blank" class="btn btn-outline-light">Ver código en GitHub</a>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-      </div>
-    </div>
-  </div>
-</div>
-  
-</section>
-
-  <!-- Footer -->
-  <footer class="py-4 text-center">
+  <section id="experiencia" class="experience py-5">
     <div class="container">
 
-      <p>© 2026 Rosario Hernández — portafolio </p>
+      <h2 class="exp-title text-center mb-5">Mi experiencia</h2>
 
+      <div class="exp-grid">
+
+        <!-- Card 1 -->
+        <div class="exp-card">
+          <i class="bi bi-display exp-icon"></i>
+
+          <h3>Desarrollo de software</h3>
+
+          <p>
+            Conocimientos en programación estructurada y orientada a objetos.
+            Experiencia académica trabajando con lenguajes como C#, Java y C++,
+            aplicando lógica de programación, clases, métodos y estructuras de control.
+            Actualmente continúo en constante aprendizaje y práctica.
+          </p>
+        </div>
+
+        <!-- Card 2 (se queda igual) -->
+        <div class="exp-card">
+          <i class="bi bi-code-slash exp-icon"></i>
+
+          <h3>
+            Desarrollo <span class="accent">frontend</span><br>
+            React, NextJS
+          </h3>
+
+          <p>
+            Apasionado por la UI/UX. Desarrollo de interfaces modernas
+            utilizando HTML, CSS, JavaScript, React y NextJS.
+          </p>
+        </div>
+
+        <!-- Card 3 CAMBIADA -->
+        <div class="exp-card">
+          <i class="bi bi-database exp-icon"></i>
+
+          <h3>
+            Gestión de <span class="accent2">Bases de Datos</span><br>
+            MySQL
+          </h3>
+
+          <p>
+            Experiencia académica con MySQL: diseño de BD relacionales, <b>normalización</b>,
+            relaciones, consultas SQL (JOIN, GROUP BY), <b>CRUD</b> y generación de <b>reportes</b>.
+          </p>
+
+        </div>
+
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <script>
 
-  // Inicializar popovers
-  document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
-    new bootstrap.Popover(el, { trigger: 'click' });
-  });
 
-  // Copiar teléfono
-  function copyPhone(){
-  navigator.clipboard.writeText("+529984806010");
-  alert("Teléfono copiado");
-   }
+  <section id="proyectos" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center mb-5">Proyectos</h2>
 
-</script>
+      <div class="row g-4 projects-grid">
 
-<script>
+        <!-- Proyecto 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card2 h-100">
+            <img src="assets/img/FondoPisos.png" class="project-thumb" alt="Pisos del Caribe">
+            <div class="project-body">
+              <h3 class="project-title">Pisos del Caribe</h3>
+              <p class="project-desc">E-commerce / Catálogo web</p>
 
-function copyEmail(){
-  navigator.clipboard.writeText("charitohernandez269@gmail.com");
-  alert("Correo copiado");
-}
-</script>
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">Bootstrap</span>
+                <span class="project-tag">MySQL</span>
+              </div>
+
+              <!-- ABRE MODAL -->
+              <a class="project-link" href="#" data-bs-toggle="modal" data-bs-target="#modalProyecto1"
+                onclick="event.preventDefault()">
+                Ver proyecto <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card2 h-100">
+            <img src="assets/img/fondoEscaner.png" class="project-thumb" alt="ScannerEdu">
+            <div class="project-body">
+              <h3 class="project-title">ScannerEdu</h3>
+              <p class="project-desc">Diseño de Interfaz </p>
+
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">UX/UI</span>
+              </div>
+              <!-- ABRE MODAL -->
+              <a class="project-link" href="#" data-bs-toggle="modal" data-bs-target="#modalProyecto2"
+                onclick="event.preventDefault()">
+                Ver proyecto <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card project-card2 h-100">
+            <img src="assets/img/fondoFarmacia.png" class="project-thumb" alt="Salud Total">
+            <div class="project-body">
+              <h3 class="project-title">Salud Total</h3>
+              <p class="project-desc">Sistema web para farmacia</p>
+
+              <div class="project-tags">
+                <span class="project-tag">PHP</span>
+                <span class="project-tag">MySQL</span>
+                <span class="project-tag">Bootstrap</span>
+              </div>
+
+              <!-- ABRE MODAL -->
+              <a class="project-link" href="#" data-bs-toggle="modal" data-bs-target="#modalProyecto3"
+                onclick="event.preventDefault()">
+                Ver proyecto <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!--                  MODALES                     -->
+
+
+  <!-- Modal Proyecto 1 -->
+  <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="modalProyecto1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalProyecto1Label">Pisos Del Caribe </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Carrusel de imágenes -->
+          <div id="carouselProyecto1" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/Piso1.png" class="d-block w-100 rounded" alt="Pantalla principal">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Piso2.png" class="d-block w-100 rounded" alt="Lista de tareas">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Piso3.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Piso4.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Piso5.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Piso6.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto1"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto1"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <!-- Descripción detallada -->
+          <h5>Descripción</h5>
+
+          <p>
+            <b>Pisos del Caribe</b> es una plataforma web desarrollada como catálogo digital
+            y cotizador interactivo para la venta e instalación de pisos vinílicos tipo SPC,
+            duela y laminados.
+          </p>
+
+          <p>
+            El sistema permite visualizar modelos de productos, consultar características
+            técnicas y explorar distintas colecciones mediante un catálogo dinámico orientado
+            a la experiencia del cliente.
+          </p>
+
+          <p>
+            Integra una calculadora de metros cuadrados que estima automáticamente la cantidad
+            de material necesario, número de cajas y costos aproximados de instalación,
+            optimizando el proceso de cotización de manera rápida y precisa.
+          </p>
+
+          <p>
+            El proyecto simula un entorno comercial real, combinando funcionalidades de
+            e-commerce, gestión de productos y herramientas de cálculo enfocadas al sector
+            de recubrimientos para interiores.
+          </p>
+
+          <h5>Tecnologías utilizadas</h5>
+
+          <ul>
+            <li>Frontend: HTML, CSS, JavaScript</li>
+            <li>Framework UI: Bootstrap</li>
+            <li>Backend: PHP</li>
+            <li>Base de datos: MySQL</li>
+            <li>Consultas SQL dinámicas</li>
+            <li>Formularios de cotización</li>
+          </ul>
+
+        </div>
+        <div class="modal-footer border-0">
+          <a href="https://github.com/202400248-hash/Proyecto---Pisos-Del-Caribe.git" target="_blank"
+            class="btn btn-outline-light">Ver código en GitHub</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Proyecto 2 -->
+  <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="modalProyecto2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalProyecto2Label">App de Gestión de Tareas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Carrusel de imágenes -->
+          <div id="carouselProyecto2" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/Scaner1.jpeg" class="d-block w-100 rounded" alt="Pantalla principal">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Scaner2.jpeg" class="d-block w-100 rounded" alt="Lista de tareas">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Scaner3.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/img/scaner4.jpeg" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto2"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto2"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <!-- Descripción detallada -->
+          <h5>Descripción</h5>
+
+          <p>
+            <b>ScannerEdu</b> es una interfaz web diseñada para el registro y control de estudiantes
+            mediante escaneo de códigos QR, permitiendo validar accesos de forma rápida,
+            automatizada y segura dentro de un entorno institucional.
+          </p>
+
+          <p>
+            El sistema simula el flujo de ingreso a instalaciones educativas,
+            mostrando en tiempo real el estado del escaneo, la verificación del usuario
+            y la confirmación de acceso dentro de la plataforma.
+          </p>
+
+          <p>
+            El proyecto se enfocó en la optimización del proceso de registro,
+            buscando reducir tiempos de validación manual y mejorar la organización
+            del control estudiantil mediante soluciones digitales.
+          </p>
+
+          <h5>Tecnologías utilizadas</h5>
+
+          <ul>
+            <li>Diseño de interfaz: Figma</li>
+            <li>UX/UI enfocado en experiencia de escaneo</li>
+            <li>Prototipado web responsive</li>
+            <li>Flujos de validación de usuarios</li>
+            <li>Diseño visual orientado a sistemas institucionales</li>
+          </ul>
+
+
+
+
+        </div>
+        <div class="modal-footer border-0">
+          <a href="https://www.figma.com/design/Mf53xwyan7CsoYFVlsomCX/Tocino?node-id=0-1&m=dev&t=kqpB2LaC4lqHeEP1-1"
+            target="_blank" class="btn btn-outline-light">Ver Diseño en Figma</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Proyecto 3 -->
+
+  <div class="modal fade" id="modalProyecto3" tabindex="-1" aria-labelledby="modalProyecto3Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="modalProyecto3Label">Dispensario Medico</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Carrusel de imágenes -->
+          <div id="carouselProyecto3" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/Farmacia1.png" class="d-block w-100 rounded" alt="Pantalla principal">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Farmacia2.png" class="d-block w-100 rounded" alt="Lista de tareas">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Farmacia3.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+              <div class="carousel-item">
+                <img src="assets/img/Farmacia4.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+
+              <div class="carousel-item">
+                <img src="assets/img/Farmacia5.png" class="d-block w-100 rounded" alt="Drag & drop">
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselProyecto3"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselProyecto3"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+
+          <!-- Descripción detallada -->
+
+          <h5>Descripción</h5>
+
+          <p>
+            <b>Salud Total</b> es un sistema web desarrollado para la administración del
+            dispensario médico institucional, enfocado en la gestión digital de medicamentos,
+            control de proveedores y administración de accesos de usuarios.
+          </p>
+
+          <p>
+            La plataforma permite registrar, consultar, actualizar y eliminar medicamentos
+            mediante operaciones CRUD, facilitando el control del inventario y la disponibilidad
+            de insumos médicos en tiempo real.
+          </p>
+
+          <p>
+            Además, integra un sistema de autenticación con sesiones que restringe el acceso
+            únicamente al personal autorizado, garantizando la seguridad de la información
+            y el manejo adecuado de los registros del dispensario.
+          </p>
+
+          <h5>Tecnologías utilizadas</h5>
+
+          <ul>
+            <li>Frontend: HTML, CSS, JavaScript</li>
+            <li>Framework UI: Bootstrap</li>
+            <li>Backend: PHP</li>
+            <li>Base de datos: MySQL</li>
+            <li>Métodos de envío: GET y POST</li>
+            <li>Gestión de sesiones: PHP Sessions</li>
+          </ul>
+
+
+
+          <div class="modal-footer border-0">
+            <a href="https://github.com/202400248-hash/Proyecto---Farmacia.git" target="_blank"
+              class="btn btn-outline-light">Ver código en GitHub</a>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+      <div class="container">
+
+        <p>© 2026 Rosario Hernández — portafolio </p>
+
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+      // Inicializar popovers
+      document.querySelectorAll('[data-bs-toggle="popover"]').forEach(el => {
+        new bootstrap.Popover(el, { trigger: 'click' });
+      });
+
+      // Copiar teléfono
+      function copyPhone() {
+        navigator.clipboard.writeText("+529984806010");
+        alert("Teléfono copiado");
+      }
+
+    </script>
+
+    <script>
+
+      function copyEmail() {
+        navigator.clipboard.writeText("charitohernandez269@gmail.com");
+        alert("Correo copiado");
+      }
+    </script>
 
 
 
 </body>
+
 </html>
-
-
-
