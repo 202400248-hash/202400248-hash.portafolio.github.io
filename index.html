@@ -20,8 +20,10 @@
     rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/simple-icons@13.7.0/index.min.js"></script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <style>
-    :root {
+    s :root {
       --bg: #070b12;
       --card-bg: rgba(255, 255, 255, .04);
       --text: #e8eef7;
@@ -666,6 +668,16 @@
       height: 18px;
       fill: currentColor;
     }
+
+
+    /* iconos dentro de chips */
+    .tech-i {
+      font-size: 1.05rem;
+      margin-right: .45rem;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+    }
   </style>
 
 </head>
@@ -854,45 +866,19 @@
               <div class="mini-title mb-2">Herramientas y tecnologías</div>
               <div class="chips">
 
-                <span class="chip">
-                  <span class="tech-icon" data-icon="bootstrap"></span> Bootstrap
-                </span>
+                <span class="chip"><i class="tech-i devicon-bootstrap-plain"></i>Bootstrap</span>
+                <span class="chip"><i class="tech-i devicon-html5-plain"></i>HTML5</span>
+                <span class="chip"><i class="tech-i devicon-css3-plain"></i>CSS3</span>
+                <span class="chip"><i class="tech-i devicon-javascript-plain"></i>JavaScript</span>
+                <span class="chip"><i class="tech-i devicon-php-plain"></i>PHP</span>
+                <span class="chip"><i class="tech-i devicon-mysql-original"></i>MySQL</span>
 
-                <span class="chip">
-                  <span class="tech-icon" data-icon="html5"></span> HTML5
-                </span>
+                <!-- SQL Server -->
+                <span class="chip"><i class="tech-i devicon-microsoftsqlserver-plain"></i>SQL Server</span>
 
-                <span class="chip">
-                  <span class="tech-icon" data-icon="css3"></span> CSS3
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="javascript"></span> JavaScript
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="php"></span> PHP
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="mysql"></span> MySQL
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="microsoftsqlserver"></span> SQL Server
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="figma"></span> Figma
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="git"></span> Git
-                </span>
-
-                <span class="chip">
-                  <span class="tech-icon" data-icon="github"></span> GitHub
-                </span>
+                <span class="chip"><i class="tech-i devicon-figma-plain"></i>Figma</span>
+                <span class="chip"><i class="tech-i devicon-git-plain"></i>Git</span>
+                <span class="chip"><i class="tech-i devicon-github-original"></i>GitHub</span>
 
               </div>
 
