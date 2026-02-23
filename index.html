@@ -494,107 +494,68 @@ code, .mono, .nav-code{
   padding-bottom: 60px !important;
 }
 
-/* Opcional: línea separadora suave entre portada y sobre mí */
-.hero-top::after{
+/* =========================
+   HOME (HERO + SOBRE MI)
+   ========================= */
+
+/* Ajusta altura con navbar fijo */
+#home.hero{
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-h);
+  padding-bottom: 40px;
+}
+
+/* contenedor */
+#home .hero-inner{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px; /* acerca secciones sin usar hacks */
+}
+
+/* titulo grande (reduce tamaño aquí) */
+#home .hero-title{
+  font-size: clamp(2.6rem, 4.6vw, 3.9rem);
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: .95;
+  margin: 0;
+}
+
+/* Bloque top (reduce espacio aquí) */
+#home .hero-top{
+  padding-top: 24px;
+  padding-bottom: 10px;
+}
+
+/* linea separadora */
+#home .hero-top::after{
   content: "";
   display: block;
   width: min(900px, 85%);
   height: 1px;
-  margin: 30px auto 0;
+  margin: 14px auto 0;
   background: rgba(255,255,255,.12);
 }
 
-/* ====== AJUSTE: acercar HERO + SOBRE MI ====== */
-
-/* Menos espacio abajo del bloque de arriba */
-.hero-top{
-  padding-bottom: 8px !important;
+/* Iconos: acerca al texto */
+#home .hero-actions{
+  margin-top: 12px !important;
 }
 
-/* Línea separadora más pegada */
-.hero-top::after{
-  margin: 12px auto 0 !important;
+/* Sobre mi: sube / acerca aquí */
+#home .hero-about{
+  padding-top: 6px !important;
+  padding-bottom: 26px !important;
 }
 
-/* Menos espacio arriba del bloque "Sobre mi" */
-.hero-about{
-  padding-top: 8px !important;
-  padding-bottom: 40px !important;
-}
-
-/* Si tu .container trae mucho padding */
-.hero-about.container{
-  padding-top: 12px !important;
-}
-/* Opcional: si aún queda muy separado por el row */
-.hero-about .row{
-  margin-top: 0 !important;
-}
-/* FORZAR que suba el bloque Sobre Mi */
-#home.hero .hero-top{
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-
-/* Si tienes la linea separadora como hr o pseudo-elemento */
-#home.hero .hero-divider,
-#home.hero .hero-top::after{
-  margin: 12px auto 0 !important;
-}
-
-/* Quita el exceso de padding del bloque de abajo */
-#home.hero .hero-about{
-  padding-top: 0 !important;
-  margin-top: 0 !important;
-}
-
-/* El container py-5 es el que más separa */
-#home.hero .hero-about.container{
-  padding-top: 0 !important;
-  padding-bottom: 32px !important;
-}
-
-/* El row g-5 a veces mete separación grande */
-#home.hero .hero-about .row{
-  --bs-gutter-y: 1rem; /* en vez de g-5 (muy grande) */
-}
-
-/* ===== AJUSTE FINAL: nombre más pequeño + “Sobre mi” más arriba ===== */
-
-/* 1) Haz más pequeño el nombre del HERO */
-#home.hero .hero-title{
-  font-size: clamp(3rem, 5.2vw, 5.2rem) !important;  /* reduce tamaño */
-  line-height: .92 !important;
-  letter-spacing: .06em !important;
-  margin-bottom: .6rem !important;
-}
-
-/* 2) Reduce un poco el espacio del subtítulo */
-#home.hero .hero-sub{
-  margin-bottom: .8rem !important;
-}
-
-/* 3) Baja el espacio de los iconos (para que no empujen hacia abajo) */
-#home.hero .hero-actions{
-  margin-top: .6rem !important;
-  margin-bottom: .6rem !important;
-}
-
-/* 4) Sube “Sobre mi” (más pegado al HERO) */
-#home.hero .hero-about{
-  padding-top: 0 !important;
-  margin-top: -10px !important; /* sube un poco (ajusta -6 a -16 si quieres más) */
-}
-
-/* 5) Reduce el padding del container de “Sobre mi” */
-#home.hero .hero-about.container{
-  padding-top: 0 !important;
-  padding-bottom: 28px !important;
-}
-
-/* 6) Mantén el row compacto (g-5 mete mucho aire) */
-#home.hero .hero-about .row{
-  --bs-gutter-y: .8rem !important;
+#home .hero-about .row{
+  --bs-gutter-y: .8rem;
 }
 
 
@@ -614,13 +575,13 @@ code, .mono, .nav-code{
   color: rgba(232,238,247,.85);
 }
 
-/* 3) Los párrafos del ABOUT con estilo tipo hero-sub, pero SIN mayúsculas exageradas */
+/* 3) Texto del about con estilo tipo hero-sub */
 #home .about-sub{
-  text-transform: none !important;     /* quita uppercase */
-  letter-spacing: .02em !important;    /* más natural */
-  font-size: 1.05rem !important;       /* tamaño cómodo */
-  line-height: 1.8 !important;
+  font-family: "Space Mono", monospace;
   color: rgba(232,238,247,.85);
+  letter-spacing: .06em;
+  font-size: 1.02rem;
+  line-height: 1.85;
   text-align: justify;
   text-justify: inter-word;
 }
