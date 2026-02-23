@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <style>
-    s :root {
+    :root {
       --bg: #070b12;
       --card-bg: rgba(255, 255, 255, .04);
       --text: #e8eef7;
@@ -32,141 +32,14 @@
       --accent: #66e3ff;
       --accent2: #b27cff;
       --glow: rgba(102, 227, 255, .25);
+
+      /* altura aproximada de tu navbar (ajústala si cambias padding) */
       --nav-h: 78px;
-      /* altura aproximada de tu navbar */
     }
 
-    /* HERO (una sola definición, sin duplicados) */
-
-
-    /* Contenido centrado perfecto */
-    .hero-inner {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-bottom: 50px;
-      /* baja el bloque sin romper el centrado */
-      text-align: center;
-      transform: none;
-    }
-
-    /* Título (ajústalo aquí) */
-    .hero-title {
-      font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      line-height: .95;
-      margin: 0 0 14px 0;
-    }
-
-    /* Subtítulo */
-    .hero-sub {
-      font-family: "Space Mono", monospace;
-      color: rgba(232, 238, 247, .85);
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      font-size: clamp(.85rem, 1.2vw, 1.05rem);
-      margin: 0;
-    }
-
-
-    /* Fondo */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(900px 600px at 55% 30%, rgba(178, 124, 255, .22), transparent 60%),
-        radial-gradient(900px 650px at 30% 55%, rgba(102, 227, 255, .18), transparent 62%),
-        radial-gradient(700px 500px at 70% 70%, rgba(102, 227, 255, .10), transparent 65%),
-        linear-gradient(180deg, rgba(7, 11, 18, .86), rgba(7, 11, 18, .95));
-      z-index: -2;
-    }
-
-
-
-
-
-
-    /* --- Resume / Educación estilo pro --- */
-    .resume-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 1.25rem;
-    }
-
-    @media (max-width: 992px) {
-      .resume-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .mini-title {
-      letter-spacing: .5px;
-      text-transform: uppercase;
-      font-size: .85rem;
-      color: var(--text-muted);
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: .5rem;
-    }
-
-    .chip {
-      display: inline-flex;
-      align-items: center;
-      gap: .4rem;
-      padding: .35rem .6rem;
-      border-radius: 999px;
-      background: #21262d;
-      border: 1px solid var(--border);
-      color: var(--text);
-      font-size: .85rem;
-    }
-
-    .chip i {
-      color: var(--accent);
-    }
-
-    .kpi {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: .75rem;
-    }
-
-    .kpi .card {
-      padding: 14px;
-    }
-
-    .kpi h6 {
-      margin: 0;
-      font-weight: 800;
-    }
-
-    .kpi p {
-      margin: 0;
-      color: var(--text-muted);
-      font-size: .9rem;
-    }
-
-    .list-clean {
-      margin: 0;
-      padding-left: 1.1rem;
-    }
-
-    .list-clean li {
-      margin-bottom: .35rem;
-    }
-
-    .section-divider {
-      border-top: 1px solid var(--border);
-      margin: 2rem 0;
-      opacity: .8;
-    }
-
+    /* =========================
+   BASE
+   ========================= */
     body {
       background: var(--bg);
       color: var(--text);
@@ -179,7 +52,22 @@
       font-family: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
     }
 
-    /* Navbar estilo tamalsen */
+    .text-muted {
+      color: var(--text-muted) !important;
+    }
+
+    /* Para que al ir a #seccion NO quede tapado por navbar fija */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section[id] {
+      scroll-margin-top: calc(var(--nav-h) + 18px);
+    }
+
+    /* =========================
+   NAVBAR
+   ========================= */
     .navbar {
       background: rgba(7, 11, 18, .35) !important;
       backdrop-filter: blur(10px);
@@ -201,7 +89,6 @@
       position: relative;
     }
 
-    /* En desktop: el menú se centra respecto a la pantalla, no respecto al espacio sobrante */
     @media (min-width: 992px) {
       #navbarNav {
         position: absolute;
@@ -238,48 +125,9 @@
       opacity: 1;
     }
 
-
-    .scroll-indicator {
-      position: absolute;
-      bottom: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 42px;
-      height: 62px;
-      border: 1px solid rgba(255, 255, 255, .18);
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      background: rgba(0, 0, 0, .15);
-      backdrop-filter: blur(8px);
-    }
-
-    .scroll-indicator i {
-      color: var(--accent);
-      font-size: 1.2rem;
-      animation: bounce 1.2s infinite ease-in-out;
-    }
-
-    #resume {
-      scroll-margin-top: calc(var(--nav-h) + 18px);
-    }
-
-
-    @keyframes bounce {
-
-      0%,
-      100% {
-        transform: translateY(-2px);
-        opacity: .8;
-      }
-
-      50% {
-        transform: translateY(6px);
-        opacity: 1;
-      }
-    }
-
-    /* --- UI base (importante para que se vea "pro") --- */
+    /* =========================
+   UI / CARDS
+   ========================= */
     .section-title {
       font-weight: 900;
       letter-spacing: .08em;
@@ -318,6 +166,141 @@
       border-color: rgba(102, 227, 255, .35);
     }
 
+    .section-divider {
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+      opacity: .8;
+    }
+
+    /* =========================
+   RESUME / CHIPS
+   ========================= */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 992px) {
+      .resume-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .mini-title {
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      background: #21262d;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: .85rem;
+    }
+
+    .chip i {
+      color: var(--accent);
+    }
+
+    /* =========================
+   HOME / HERO + SOBRE MI
+   ========================= */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: auto !important;
+      min-height: auto !important;
+
+      /* IMPORTANTE: separa del navbar fijo */
+      padding-top: calc(var(--nav-h) + 24px);
+      padding-bottom: 58px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(900px 600px at 55% 30%, rgba(178, 124, 255, .22), transparent 60%),
+        radial-gradient(900px 650px at 30% 55%, rgba(102, 227, 255, .18), transparent 62%),
+        radial-gradient(700px 500px at 70% 70%, rgba(102, 227, 255, .10), transparent 65%),
+        linear-gradient(180deg, rgba(7, 11, 18, .86), rgba(7, 11, 18, .95));
+      z-index: -1;
+    }
+
+    .hero-inner {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-inline: 12px;
+      text-align: center;
+
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .hero-top {
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 4.6vw, 3.9rem);
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      line-height: .95;
+      margin: 0;
+    }
+
+    .hero-sub {
+      font-family: "Space Mono", monospace;
+      color: rgba(232, 238, 247, .85);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-size: clamp(.85rem, 1.2vw, 1.05rem);
+      margin: 0;
+    }
+
+    .hero-actions {
+      margin-top: 12px !important;
+      margin-bottom: 0;
+    }
+
+    .hero-top::after {
+      content: "";
+      display: block;
+      width: min(900px, 85%);
+      height: 1px;
+      margin: 10px auto 0;
+      background: rgba(255, 255, 255, .12);
+    }
+
+    /* Sobre mi */
+    .hero-about {
+      padding-top: 6px !important;
+      padding-bottom: 26px !important;
+    }
+
+    .hero-about .row {
+      --bs-gutter-y: .8rem;
+    }
+
     .avatar {
       width: 120px;
       height: 120px;
@@ -326,115 +309,77 @@
       box-shadow: 0 0 30px rgba(102, 227, 255, .18);
     }
 
-    .text-muted {
-      color: var(--text-muted) !important;
+    /* Lead solo dentro del home (justificado) */
+    #home .lead {
+      text-align: justify;
+      text-justify: inter-word;
     }
 
-    .tech-badge {
-      background: rgba(255, 255, 255, .04);
-      border: 1px solid var(--border);
-      color: var(--text);
+    /* Si usas .hero-lead en el subtítulo del hero */
+    #home .hero-lead {
+      text-align: center !important;
+      margin: 0;
+      max-width: 950px;
+      margin-inline: auto;
+      color: rgba(232, 238, 247, .85);
     }
 
-    .btn-accent {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      border: 0;
-      color: #071018;
-      font-weight: 900;
+    /* Si usas .about-sub en los textos de Sobre mi */
+    #home .about-sub {
+      font-family: "Space Mono", monospace;
+      color: rgba(232, 238, 247, .85);
+      letter-spacing: .06em;
+      font-size: 1.02rem;
+      line-height: 1.85;
+      text-align: justify;
+      text-justify: inter-word;
     }
 
-    .btn-accent:hover {
-      filter: brightness(1.06);
-    }
-
-    /* Cards lift */
-    .project-card {
-      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
-      border-color: rgba(178, 124, 255, .35);
-    }
-
-    /* ===== EXPERIENCE ===== */
-
-    .experience {
-      background: linear-gradient(180deg,
-          rgba(7, 11, 18, .95),
-          rgba(7, 11, 18, 1));
-    }
-
-    .exp-title {
-      font-size: 3rem;
-      font-weight: 900;
-      letter-spacing: .05em;
-    }
-
-    /* Grid horizontal */
-    .exp-grid {
+    /* Flecha */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 24px;
+      /* SUBIDA (antes 60px) */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 42px;
+      height: 62px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 999px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border: 1px solid rgba(255, 255, 255, .15);
+      place-items: center;
+      background: rgba(0, 0, 0, .15);
+      backdrop-filter: blur(8px);
+      z-index: 2;
     }
 
-    @media(max-width: 992px) {
-      .exp-grid {
-        grid-template-columns: 1fr;
+    .scroll-indicator i {
+      color: var(--accent);
+      font-size: 1.2rem;
+      animation: bounce 1.2s infinite ease-in-out;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(-2px);
+        opacity: .8;
+      }
+
+      50% {
+        transform: translateY(6px);
+        opacity: 1;
       }
     }
 
-    /* Card */
-    .exp-card {
-      padding: 48px 38px;
-      border-right: 1px solid rgba(255, 255, 255, .15);
-      transition: .3s;
+    /* Mantener tamaño normal de Bootstrap Icons del Home */
+    #home .bi {
+      font-size: 1.2rem;
+      line-height: 1;
     }
 
-    .exp-card:last-child {
-      border-right: none;
-    }
-
-    /* Hover */
-    .exp-card:hover {
-      background: rgba(255, 255, 255, .02);
-    }
-
-    /* Icon */
-    .exp-icon {
-      font-size: 2.2rem;
-      margin-bottom: 18px;
-      color: var(--accent);
-    }
-
-    /* Title */
-    .exp-card h3 {
-      font-weight: 800;
-      margin-bottom: 18px;
-      line-height: 1.2;
-    }
-
-    /* Text */
-    .exp-card p {
-      color: var(--text-muted);
-      line-height: 1.6;
-      font-family: "Space Mono", monospace;
-    }
-
-    /* Accent words */
-    .accent {
-      color: #4c6fff;
-      text-decoration: underline;
-      text-decoration-thickness: 3px;
-    }
-
-    .accent2 {
-      color: #ff7a18;
-      text-decoration: underline;
-      text-decoration-thickness: 3px;
-    }
-
+    /* Contact icons */
     .contact-icon {
       width: 48px;
       height: 48px;
@@ -454,7 +399,79 @@
       transform: translateY(-3px);
     }
 
-    /* ====== PROYECTOS (estilo tipo ejemplo) ====== */
+    /* =========================
+   EXPERIENCE
+   ========================= */
+    .experience {
+      background: linear-gradient(180deg, rgba(7, 11, 18, .95), rgba(7, 11, 18, 1));
+    }
+
+    .exp-title {
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: .05em;
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    @media(max-width: 992px) {
+      .exp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .exp-card {
+      padding: 48px 38px;
+      border-right: 1px solid rgba(255, 255, 255, .15);
+      transition: .3s;
+    }
+
+    .exp-card:last-child {
+      border-right: none;
+    }
+
+    .exp-card:hover {
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .exp-icon {
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    .exp-card h3 {
+      font-weight: 800;
+      margin-bottom: 18px;
+      line-height: 1.2;
+    }
+
+    .exp-card p {
+      color: var(--text-muted);
+      line-height: 1.6;
+      font-family: "Space Mono", monospace;
+    }
+
+    /* Accent words */
+    .accent {
+      color: #4c6fff;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+
+    .accent2 {
+      color: #ff7a18;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+    }
+
+    /* =========================
+   PROYECTOS
+   ========================= */
     .projects-grid .card {
       border-radius: 22px;
       overflow: hidden;
@@ -519,153 +536,16 @@
       color: white;
     }
 
+    .project-card,
     .project-card2 {
       transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
     }
 
+    .project-card:hover,
     .project-card2:hover {
       transform: translateY(-10px);
       box-shadow: 0 26px 70px rgba(0, 0, 0, .55);
       border-color: rgba(102, 227, 255, .35);
-    }
-
-    /* home y presentacion sobre mi */
-    /* Evita que HERO se coma toda la pantalla */
-    .hero {
-      min-height: auto !important;
-      height: auto !important;
-      padding: 80px 0 40px;
-    }
-
-    /* Si tenías height/min-height en hero-inner, lo anulamos */
-    .hero-inner {
-      min-height: auto !important;
-      height: auto !important;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Portada centrada y con separación controlada */
-    .hero-top {
-      text-align: center;
-      padding-top: 40px;
-      padding-bottom: 30px;
-    }
-
-    /* Sección “Sobre mí” dentro del mismo home */
-    .hero-about {
-      padding-top: 40px !important;
-      padding-bottom: 60px !important;
-    }
-
-    /* =========================
-   HOME (HERO + SOBRE MI)
-   ========================= */
-
-    /* Ajusta altura con navbar fijo */
-    #home.hero {
-      position: relative;
-      overflow: hidden;
-      padding-top: var(--nav-h);
-      padding-bottom: 40px;
-    }
-
-    /* contenedor */
-    #home .hero-inner {
-      width: 100%;
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      /* acerca secciones sin usar hacks */
-    }
-
-    /* titulo grande (reduce tamaño aquí) */
-    #home .hero-title {
-      font-size: clamp(2.6rem, 4.6vw, 3.9rem);
-      font-weight: 900;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      line-height: .95;
-      margin: 0;
-    }
-
-    /* Bloque top (reduce espacio aquí) */
-    #home .hero-top {
-      padding-top: 8px;
-      padding-bottom: 4px;
-    }
-
-    /* linea separadora */
-    #home .hero-top::after {
-      content: "";
-      display: block;
-      width: min(900px, 85%);
-      height: 1px;
-      margin: 8px auto 0;
-      background: rgba(255, 255, 255, .12);
-    }
-
-    /* Iconos: acerca al texto */
-    #home .hero-actions {
-      margin-top: 12px !important;
-    }
-
-    /* Sobre mi: sube / acerca aquí */
-    #home .hero-about {
-      padding-top: 6px !important;
-      padding-bottom: 26px !important;
-    }
-
-    #home .hero-about .row {
-      --bs-gutter-y: .8rem;
-    }
-
-
-    /* ===== SWAP: Hero-sub como lead + lead justificado ===== */
-
-    /* 1) Justificar todo texto con class="lead" (solo dentro del home para no afectar todo) */
-    #home .lead {
-      text-align: justify;
-      text-justify: inter-word;
-    }
-
-    /* 2) Este lead del HERO que se vea centrado (aunque sea justificado) */
-    #home .hero-lead {
-      text-align: center !important;
-      margin: 0;
-      max-width: 950px;
-      margin-inline: auto;
-      color: rgba(232, 238, 247, .85);
-    }
-
-    /* 3) Texto del about con estilo tipo hero-sub */
-    #home .about-sub {
-      font-family: "Space Mono", monospace;
-      color: rgba(232, 238, 247, .85);
-      letter-spacing: .06em;
-      font-size: 1.02rem;
-      line-height: 1.85;
-      text-align: justify;
-      text-justify: inter-word;
-    }
-
-    /* iconos dentro de chips */
-
-    .tech-i {
-      font-size: 1.05rem;
-      margin-right: .45rem;
-      line-height: 1;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    /* Mantener tamaño normal de Bootstrap Icons del Home */
-    #home .bi {
-      font-size: 1.2rem;
-      line-height: 1;
     }
   </style>
 
