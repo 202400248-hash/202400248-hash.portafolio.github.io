@@ -1304,16 +1304,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-      document.querySelectorAll(".tech-icon[data-icon]").forEach(el => {
-        const key = el.getAttribute("data-icon");
-        const iconKey = "si" + key.charAt(0).toUpperCase() + key.slice(1);
-        const icon = window.simpleIcons?.[iconKey];
-        if (!icon) return;
-        el.innerHTML = icon.svg;
-      });
-    </script>
-
+  
     <script>
 
       // Inicializar popovers
