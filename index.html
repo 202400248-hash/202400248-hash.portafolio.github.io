@@ -649,6 +649,23 @@
       text-align: justify;
       text-justify: inter-word;
     }
+
+
+
+    .tech-icon {
+      width: 18px;
+      height: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 6px;
+    }
+
+    .tech-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
   </style>
 
 </head>
@@ -1324,6 +1341,16 @@
         navigator.clipboard.writeText("charitohernandez269@gmail.com");
         alert("Correo copiado");
       }
+    </script>
+
+    <script>
+      document.querySelectorAll(".tech-icon[data-icon]").forEach(el => {
+        const key = el.getAttribute("data-icon");
+        const iconKey = "si" + key.charAt(0).toUpperCase() + key.slice(1);
+        const icon = window.simpleIcons?.[iconKey];
+        if (!icon) return;
+        el.innerHTML = icon.svg;
+      });
     </script>
 
 
