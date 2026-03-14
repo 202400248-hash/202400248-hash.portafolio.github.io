@@ -304,11 +304,17 @@
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 165px;
+      height: 165px;
       border-radius: 50%;
-      border: 3px solid rgba(102, 227, 255, .55);
-      box-shadow: 0 0 30px rgba(102, 227, 255, .18);
+      object-fit: cover;
+      object-position: center;
+      border: 3px solid rgba(102, 227, 255, .65);
+      box-shadow:
+        0 0 12px rgba(102, 227, 255, .20),
+        0 0 30px rgba(102, 227, 255, .16);
+      display: block;
+      margin: 0 auto;
     }
 
     /* Lead solo dentro del home (justificado) */
@@ -643,10 +649,10 @@
       </div>
 
       <div class="hero-about container pt-1 pb-4">
-        <div class="row align-items-center g-5">
+        <div class="row align-items-center g-4">
 
-          <div class="col-lg-4 text-center">
-            <img src="assets/img/yo.jpeg" alt="Rosario" class="avatar mb-3" />
+          <div class="col-lg-3 text-center">
+            <img src="assets/img/yo.jpeg" alt="Rosario" class="avatar" />
           </div>
 
           <div class="col-lg-8">
